@@ -14,3 +14,4 @@
 |           Shii           |               What                |
 | :----------------------: | :-------------------------------: |
 | [`initz.sh`](./initz.sh) | Script to install important panty |
+|        [`W`](./W)        |         Main Work Folder          |
