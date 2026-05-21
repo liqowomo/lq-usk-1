@@ -46,7 +46,42 @@ pussy1() {
 	echo -e "───── ⋆⋅☆⋅⋆ ─────${RESET}"
 }
 
-# Looping Booties
+# Wrangler deployments workers (new default method)
+wr1() {
+	declare -a CMD=(
+
+		#0 -  Step1 - Export Smelly Panty
+		# export CLOUDFLARE_API_TOKEN="StinkyPanty"
+
+		# 1 - Do the wrangler setup
+		bunx wrangler setup
+
+		# 2 - Setup the wrangler types
+		bunx wrangler types
+
+		# 3 - Build Booty
+		bun run build
+
+		#4 - Deploy Spread Ass lick
+		bun run deploy
+	)
+
+	for CMDEXEC in "${CMD[@]}"; do
+		echo -e "${BBLUE}────── ꒰ঌ·✦·໒꒱ ──────${RESET}"
+		echo -e "${BBLUE}────── Wrangler Wrokers Deployments ──────${RESET}"
+		echo -e "${BBLUE}────── ꒰ঌ·✦·໒꒱ ──────${RESET}"
+		echo -e "Executing: ${CMDEXEC}"
+		eval "${CMDEXEC}"
+		echo -e "${BGREEN}Done!${RESET}"
+		echo -e "${BBLUE}───── ⋆⋅☆⋅⋆ ─────${RESET}"
+		echo -e "${BBLUE}───── ⋆⋅☆⋅⋆ ─────${RESET}"
+		echo -e "${BBLUE}───── ⋆⋅☆⋅⋆ ─────${RESET}"
+		echo -e ""
+		echo -e ""
+		echo -e ""
+	done
+}
+
 booty1() {
 	declare -a CMD=(
 
@@ -71,8 +106,9 @@ booty1() {
 # /// Execiton ///
 
 panty() {
-	pussy1 2>&1 | tee -a initz.sh.txt
+	# pussy1 2>&1 | tee -a initz.sh.txt
 	# booty1 2>&1 | tee -a initz.sh.txt
+	wr1 2>&1 | tee -a initz.sh.txt
 
 }
 panty
