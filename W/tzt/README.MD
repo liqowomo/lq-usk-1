@@ -3,6 +3,8 @@
 
 1. [What](#what)
 2. [Shii](#shii)
+3. [ImpCmd](#impcmd)
+   1. [Make SV](#make-sv)
 
 # What
 
@@ -10,6 +12,15 @@
 
 # Shii
 
-|      Shii      |      What      |
-| :------------: | :------------: |
-| [`tzt`](./tzt) | General Testst |
+|      Shii      |                              What                              |
+| :------------: | :------------------------------------------------------------: |
+| [`tz1`](./tz1) | Make new Svelete project and try to deploy to CF with wrangler |
+
+# ImpCmd
+
+## Make SV
+
+```sh
+# As per official docs -https://svelte.dev/docs/kit/creating-a-project
+bunx sv create my-app
+```
