@@ -13,9 +13,9 @@
 
 # Shii
 
-|      Shii      |                              What                              |
-| :------------: | :------------------------------------------------------------: |
-| [`tz1`](./tz1) | Make new Svelete project and try to deploy to CF with wrangler |
+|            Shii            |         What         |
+| :------------------------: | :------------------: |
+| [`pjinit.sh`](./pjinit.sh) | Cmds to init project |
 
 # ImpCmd
 
