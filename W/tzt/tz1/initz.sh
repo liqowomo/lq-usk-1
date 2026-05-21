@@ -28,12 +28,18 @@ RESET='\033[0m'
 pussy1() {
 	declare -a CMD=(
 
-		#0 -  Wrangler Auth
-		"bun add -d wrangler@latest"
+		#0 -  Who am ai
+		"bunx wrangler whoami"
+
+		#1 List specific projects
+		"bunx wrangler pages deployment list --project-name my-app"
+
+		#2 List all projects
+		"bunx wrangler deployments list"
 
 	)
 
-	CMDEXEC="${CMD[0]}"
+	CMDEXEC="${CMD[2]}"
 	echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
 	echo -e "${BBLUE} · · ────── PantySmellling ────── · ·"
 	echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
@@ -44,6 +50,9 @@ pussy1() {
 	echo -e "───── ⋆⋅☆⋅⋆ ─────${RESET}"
 	echo -e "───── ⋆⋅☆⋅⋆ ─────${RESET}"
 	echo -e "───── ⋆⋅☆⋅⋆ ─────${RESET}"
+	echo -e ""
+	echo -e ""
+	echo -e ""
 }
 
 # Looping Booties
