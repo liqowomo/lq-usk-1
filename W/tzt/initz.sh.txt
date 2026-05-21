@@ -241,3 +241,190 @@ HINT: Run "sv --help" to get the full list of commands, add-ons, and examples to
 ───── ⋆⋅☆⋅⋆ ─────[0m
 ───── ⋆⋅☆⋅⋆ ─────[0m
 ───── ⋆⋅☆⋅⋆ ─────[0m
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+[1;94m · · ────── PantySmellling ────── · ·
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+Thu May 21 11:32:14 AM UTC 2026
+Executing:[1;95mbunx sv create[0m
+
+HINT: Run "sv --help" to get the full list of commands, add-ons, and examples to one-shot and skip interactive prompts.
+┌  Welcome to the Svelte CLI! (v0.15.3)
+[?25l│
+◆  Where would you like your project to be created?
+│    (hit Enter to use './')
+└
+[999D[4A[2B[2K[G│  t█[2B[999D[4A[2B[2K[G│  tz█[2B[999D[4A[2B[2K[G│  tz1█[2B[999D[4A[1B[J◇  Where would you like your project to be created?
+│  tz1
+[?25h[?25l│
+◆  Which template would you like?
+│  ● SvelteKit minimal (barebones scaffolding for your new app)
+│  ○ SvelteKit demo
+│  ○ Svelte library
+└
+[999D[6A[2B[J│  ○ SvelteKit minimal
+│  ● SvelteKit demo (showcase app with a word guessing game that works without 
+│  JavaScript)
+│  ○ Svelte library
+└
+[999D[7A[3B[J│  ○ SvelteKit demo
+│  ● Svelte library (setup with svelte-package to help correctly package your 
+│  library)
+└
+[999D[7A[3B[J│  ● SvelteKit demo (showcase app with a word guessing game that works without 
+│  JavaScript)
+│  ○ Svelte library
+└
+[999D[7A[1B[J◇  Which template would you like?
+│  SvelteKit demo
+[?25h[?25l│
+◆  Add type checking with TypeScript?
+│  ● Yes, using TypeScript syntax
+│  ○ Yes, using JavaScript with JSDoc comments
+│  ○ No
+└
+[999D[6A[2B[J│  ○ Yes, using TypeScript syntax
+│  ● Yes, using JavaScript with JSDoc comments
+│  ○ No
+└
+[999D[6A[1B[J◇  Add type checking with TypeScript?
+│  Yes, using JavaScript with JSDoc comments
+[?25h[?25l│
+◆  What would you like to add to your project? (use arrow keys / space bar)
+│  ◻ prettier (formatter - https://prettier.io)
+│  ◻ eslint
+│  ◻ vitest
+│  ◻ playwright
+│  ◻ tailwindcss
+│  ◻ sveltekit-adapter
+│  ◻ drizzle
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[2B[J│  ◻ prettier
+│  ◻ eslint (linter - https://eslint.org)
+│  ◻ vitest
+│  ◻ playwright
+│  ◻ tailwindcss
+│  ◻ sveltekit-adapter
+│  ◻ drizzle
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[3B[J│  ◻ eslint
+│  ◻ vitest (unit testing - https://vitest.dev)
+│  ◻ playwright
+│  ◻ tailwindcss
+│  ◻ sveltekit-adapter
+│  ◻ drizzle
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[4B[J│  ◻ vitest
+│  ◻ playwright (browser testing - https://playwright.dev)
+│  ◻ tailwindcss
+│  ◻ sveltekit-adapter
+│  ◻ drizzle
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[5B[J│  ◻ playwright
+│  ◻ tailwindcss (css framework - https://tailwindcss.com)
+│  ◻ sveltekit-adapter
+│  ◻ drizzle
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[6B[2K[G│  ◼ tailwindcss (css framework - https://tailwindcss.com)[9B[999D[15A[7B[2K[G│  ◻ sveltekit-adapter (deployment - https://svelte.dev/docs/kit/adapters)[8B[999D[15A[7B[J│  ◻ sveltekit-adapter
+│  ◻ drizzle (database orm - https://orm.drizzle.team)
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[8B[J│  ◻ drizzle
+│  ◻ better-auth (auth library - https://www.better-auth.com)
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[9B[J│  ◻ better-auth
+│  ◻ mdsvex (svelte + markdown - https://mdsvex.pngwn.io)
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[10B[J│  ◻ mdsvex
+│  ◻ paraglide (i18n - https://inlang.com/m/gerre34r/library-inlang-paraglideJs)
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[11B[J│  ◻ paraglide
+│  ◻ storybook (frontend workshop - https://storybook.js.org)
+│  ◻ mcp
+└
+[999D[15A[12B[J│  ◻ storybook
+│  ◻ mcp (Svelte MCP - https://svelte.dev/docs/mcp)
+└
+[999D[15A[1B[J◇  What would you like to add to your project? (use arrow keys / space bar)
+│  tailwindcss
+[?25h[?25l│
+◆  Which plugins would you like to add?
+│  ◻ typography (@tailwindcss/typography)
+│  ◻ forms
+└
+[999D[5A[2B[J│  ◻ typography
+│  ◻ forms (@tailwindcss/forms)
+└
+[999D[5A[2B[J│  ◻ typography (@tailwindcss/typography)
+│  ◻ forms
+└
+[999D[5A[2B[2K[G│  ◼ typography (@tailwindcss/typography)[3B[999D[5A[1B[J◇  Which plugins would you like to add?
+│  typography
+[?25h│
+◆  Project created
+│
+◆  Successfully setup add-ons: tailwindcss
+│
+│  To skip prompts next time, run:
+●  bun x sv@0.15.3 create --template demo --types jsdoc --add tailwindcss="plugins:typography" --install bun tz1
+│
+◇  Installing dependencies with bun...
+[2K[1A[2K[G[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G│
+◆  Successfully installed dependencies with bun
+│
+◇  What's next? ───────────────────────────────╮
+│                                              │
+│  📁 Project steps                            │
+│                                              │
+│    1: cd tz1                                 │
+│    2: bun run dev --open                     │
+│                                              │
+│  To close the dev server, hit Ctrl-C         │
+│                                              │
+│  Stuck? Visit us at https://svelte.dev/chat  │
+│                                              │
+├──────────────────────────────────────────────╯
+│
+└  You're all set!
+
+[1;92mDone!
+───── ⋆⋅☆⋅⋆ ─────[0m
+───── ⋆⋅☆⋅⋆ ─────[0m
+───── ⋆⋅☆⋅⋆ ─────[0m

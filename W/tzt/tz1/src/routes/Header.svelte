@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import github from '$lib/images/github.svg';

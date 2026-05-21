@@ -1,7 +1,8 @@
-<script lang="ts">
+<script>
 	import Header from './Header.svelte';
 	import './layout.css';
 
+	/** @type {{children: import('svelte').Snippet}} */
 	let { children } = $props();
 </script>
 
@@ -11,7 +12,7 @@
 
 	<footer>
 		<p>
-			visit
+			visit 
 			<a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a>
 			to learn about SvelteKit
 		</p>

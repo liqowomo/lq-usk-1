@@ -1,12 +1,13 @@
-<script lang="ts">
+<script>
 	import { enhance } from '$app/forms';
 	import { resolve } from '$app/paths';
 	import { confetti } from '@neoconfetti/svelte';
 	import { MediaQuery } from 'svelte/reactivity';
 
-	import type { PageProps } from './$types';
-
-	let { data }: PageProps = $props();
+	/**
+	 * @type {import('./$types').PageProps}
+	 */
+	let { data } = $props();
 
 	/** Whether the user prefers reduced motion */
 	const reducedMotion = new MediaQuery('(prefers-reduced-motion: reduce)');
@@ -29,13 +30,15 @@
 		/**
 		 * A map of classnames for all letters that have been guessed,
 		 * used for styling the keyboard
+		 * @type {Record<string, 'exact' | 'close' | 'missing'>}
 		 */
-		let classnames: Record<string, 'exact' | 'close' | 'missing'> = {};
+		let classnames = {};
 		/**
 		 * A map of descriptions for all letters that have been guessed,
 		 * used for adding text for assistive technology (e.g. screen readers)
+		 * @type {Record<string, string>}
 		 */
-		let description: Record<string, string> = {};
+		let description = {};
 		data.answers.forEach((answer, i) => {
 			const guess = data.guesses[i];
 			for (let i = 0; i < 5; i += 1) {
@@ -55,12 +58,11 @@
 	/**
 	 * Modify the game state without making a trip to the server,
 	 * if client-side JavaScript is enabled
+	 * @param {MouseEvent} event
 	 */
-	function update(event: MouseEvent) {
+	function update(event) {
 		event.preventDefault();
-		const key = (event.target as HTMLButtonElement).getAttribute(
-			'data-key'
-		);
+		const key = /** @type {HTMLButtonElement} */ (event.target).getAttribute('data-key');
 
 		if (key === 'backspace') {
 			currentGuess = currentGuess.slice(0, -1);
@@ -73,8 +75,9 @@
 	/**
 	 * Trigger form logic in response to a keydown event, so that
 	 * desktop users can use the keyboard to play the game
+	 * @param {KeyboardEvent} event
 	 */
-	function keydown(event: KeyboardEvent) {
+	function keydown(event) {
 		if (event.metaKey) return;
 
 		if (event.key === 'Enter' && !submittable) return;
