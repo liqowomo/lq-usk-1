@@ -10,6 +10,8 @@
 
 # Shii
 
-|      Shii      |      What      |
-| :------------: | :------------: |
-| [`tzt`](./tzt) | General Testst |
+|         Shii         |       What       |
+| :------------------: | :--------------: |
+|    [`tzt`](./tzt)    |  General Testst  |
+|    [`ncl`](./ncl)    | Logs of `ncl.sh` |
+| [`ncl.sh`](./ncl.sh) | Cleanign script  |
