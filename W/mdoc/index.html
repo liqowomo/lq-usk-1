@@ -1,16 +1,21 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>wezbest/wz-ulnjs-1/tree/w1/W - work</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>liqowomo/lq-usk-1/tree/w1/W</title>
 
     <!-- ========== FAVICON (PNG) ========== -->
     <link rel="icon" type="image/webp" href="e.webp" />
 
     <!-- ========== OPEN GRAPH / SOCIAL MEDIA META TAGS ========== -->
-    <meta property="og:title" content="https://github.com/wezbest/wz-ulnjs-1/tree/w1/W/mdoc/m1" />
+    <meta
+      property="og:title"
+      content="https://github.com/liqowomo/lq-usk-1/tree/w1/W"
+    />
     <meta property="og:description" content="Snifffing and licking" />
     <meta property="og:image" content="e.webp" />
     <meta property="og:image:type" content="image/webp" />
@@ -21,321 +26,396 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- PicoCSS (light/dark auto) – base framework -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
 
     <!-- MINIMAL custom CSS: hover lift + border, text-center, button pop, and URL pill styling -->
     <style>
-        /* minimal custom styles - only for hover lift/border, text centering, button emphasis, and url pills */
+      /* minimal custom styles - only for hover lift/border, text centering, button emphasis, and url pills */
 
-        /* text-center utility */
-        .text-center {
-            text-align: center;
-        }
+      /* text-center utility */
+      .text-center {
+        text-align: center;
+      }
 
-        /* card hover effect: slight lift + border accent */
-        article {
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease,
-                border-color 0.2s ease;
-            border: 1px solid transparent;
-            border-radius: var(--pico-border-radius);
-        }
+      /* card hover effect: slight lift + border accent */
+      article {
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease;
+        border: 1px solid transparent;
+        border-radius: var(--pico-border-radius);
+      }
 
-        article:hover {
-            transform: translateY(-4px);
-            border-color: var(--pico-primary-border);
-            box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.25);
-        }
+      article:hover {
+        transform: translateY(-4px);
+        border-color: var(--pico-primary-border);
+        box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.25);
+      }
 
-        /* ensure all card content centered */
-        article,
-        article header,
-        article footer,
-        article p {
-            text-align: center;
-        }
+      /* ensure all card content centered */
+      article,
+      article header,
+      article footer,
+      article p {
+        text-align: center;
+      }
 
-        /* center the footer buttons inside cards */
-        .grid article footer {
-            display: flex;
-            justify-content: center;
-        }
+      /* center the footer buttons inside cards */
+      .grid article footer {
+        display: flex;
+        justify-content: center;
+      }
 
-        /* Hero section full centering */
-        .hero-section h1,
-        .hero-section p,
-        .hero-actions {
-            text-align: center;
-        }
+      /* Hero section full centering */
+      .hero-section h1,
+      .hero-section p,
+      .hero-actions {
+        text-align: center;
+      }
 
-        /* make external links / buttons STAND OUT */
-        article footer a[role="button"] {
-            transition:
-                transform 0.15s ease,
-                box-shadow 0.15s ease;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-        }
+      /* make external links / buttons STAND OUT */
+      article footer a[role="button"] {
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+      }
 
-        /* extra pop: slight scale on hover, stronger shadow */
-        article footer a[role="button"]:hover {
-            transform: scale(1.02);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
+      /* extra pop: slight scale on hover, stronger shadow */
+      article footer a[role="button"]:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
 
-        /* outline buttons also get distinctive hover */
-        article footer a[role="button"].outline:hover {
-            background: var(--pico-primary-focus);
-            color: var(--pico-primary-inverse);
-            border-color: var(--pico-primary);
-        }
+      /* outline buttons also get distinctive hover */
+      article footer a[role="button"].outline:hover {
+        background: var(--pico-primary-focus);
+        color: var(--pico-primary-inverse);
+        border-color: var(--pico-primary);
+      }
 
-        article footer a[role="button"]:active {
-            transform: scale(0.98);
-        }
+      article footer a[role="button"]:active {
+        transform: scale(0.98);
+      }
 
-        /* ============ URL PILL STYLING ============ */
-        .url-pill {
-            display: inline-block;
-            background: var(--pico-muted-border-color);
-            background-color: rgba(128, 128, 128, 0.12);
-            backdrop-filter: blur(2px);
-            padding: 0.3rem 0.85rem;
-            border-radius: 2rem;
-            font-size: 0.75rem;
-            font-family:
-                ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
-            letter-spacing: 0.2px;
-            color: var(--pico-color-slate-600);
-            text-decoration: none;
-            transition: all 0.2s ease;
-            border: 1px solid transparent;
-            max-width: 90%;
-            overflow-x: auto;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            margin-bottom: 0.75rem;
-        }
+      /* ============ URL PILL STYLING ============ */
+      .url-pill {
+        display: inline-block;
+        background: var(--pico-muted-border-color);
+        background-color: rgba(128, 128, 128, 0.12);
+        backdrop-filter: blur(2px);
+        padding: 0.3rem 0.85rem;
+        border-radius: 2rem;
+        font-size: 0.75rem;
+        font-family:
+          ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+        letter-spacing: 0.2px;
+        color: var(--pico-color-slate-600);
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+        max-width: 90%;
+        overflow-x: auto;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-bottom: 0.75rem;
+      }
 
-        /* dark mode adaptation */
-        [data-theme="dark"] .url-pill,
-        :root:has([data-theme="dark"]) .url-pill {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--pico-color-slate-300);
-            border-color: rgba(255, 255, 255, 0.08);
-        }
+      /* dark mode adaptation */
+      [data-theme="dark"] .url-pill,
+      :root:has([data-theme="dark"]) .url-pill {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--pico-color-slate-300);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
 
-        /* pill hover effect */
-        .url-pill:hover {
-            background-color: rgba(128, 128, 128, 0.2);
-            border-color: var(--pico-primary-border);
-            color: var(--pico-primary);
-            transform: translateY(-1px);
-        }
+      /* pill hover effect */
+      .url-pill:hover {
+        background-color: rgba(128, 128, 128, 0.2);
+        border-color: var(--pico-primary-border);
+        color: var(--pico-primary);
+        transform: translateY(-1px);
+      }
 
-        /* make pill wrapper center-aligned */
-        .pill-wrapper {
-            text-align: center;
-            margin: 0.5rem 0 0.25rem;
-        }
+      /* make pill wrapper center-aligned */
+      .pill-wrapper {
+        text-align: center;
+        margin: 0.5rem 0 0.25rem;
+      }
 
-        article footer {
-            margin-top: 0.5rem;
-        }
+      article footer {
+        margin-top: 0.5rem;
+      }
 
-        .url-pill::-webkit-scrollbar {
-            height: 2px;
-        }
+      .url-pill::-webkit-scrollbar {
+        height: 2px;
+      }
 
-        article header {
-            margin-bottom: 0.75rem;
-        }
+      article header {
+        margin-bottom: 0.75rem;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <main class="container text-center">
-        <!-- ================= HERO SECTION ================= -->
-        <header class="hero-section" style="
+      <!-- ================= HERO SECTION ================= -->
+      <header
+        class="hero-section"
+        style="
           margin-top: var(--pico-spacing);
           margin-bottom: var(--pico-spacing-xl);
-        ">
-            <h1 style="--pico-typography-spacing-top: 0">
-                ✨ wezbest/wz-ulnjs-1/tree/w1/W <br />
-                <span style="
+        "
+      >
+        <h1 style="--pico-typography-spacing-top: 0">
+          ✨ liqowomo/lq-usk-1/tree/w1/W <br />
+          <span
+            style="
               font-weight: var(--pico-font-weight-normal);
               color: var(--pico-muted-color);
-            ">
-                    Projects List</span>
-            </h1>
-            <p class="pico-color-slate-400" style="
+            "
+          >
+            Projects List</span
+          >
+        </h1>
+        <p
+          class="pico-color-slate-400"
+          style="
             font-size: 1.25rem;
             max-width: 720px;
             margin-left: auto;
             margin-right: auto;
-          ">
-                Each work project will be uploaded to Verpanty and linked in this page
+          "
+        >
+          Each work project will be uploaded to Verpanty and linked in this page
+        </p>
+        <div class="hero-actions" style="margin-top: var(--pico-spacing-lg)">
+          <a
+            href="https://github.com/liqowomo/lq-usk-1/tree/w1/W"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="button"
+          >
+            Liqowomo Repo →
+          </a>
+        </div>
+      </header>
+
+      <!-- subtle divider line -->
+      <hr />
+
+      <!-- ================= CARDS SECTION ================= -->
+      <!-- ================= CARDS SECTION ================= -->
+      <!-- ================= CARDS SECTION ================= -->
+      <section>
+        <!-- First row of cards (3 columns) -->
+        <div class="grid">
+          <!-- CARD 1 -->
+          <article>
+            <header>
+              <strong>📘 Vite Tutorial Wor</strong>
+            </header>
+            <p>This has all the vite tutorial work</p>
+            <div class="pill-wrapper">
+              <a
+                href="https://wezbestwzuknjs1w1wvtzvt3.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="url-pill"
+                title="Visit documentation"
+              >
+                🔗 https://wezbestwzuknjs1w1wvtzvt3.vercel.app/
+              </a>
+            </div>
+            <footer>
+              <a
+                href="https://wezbestwzuknjs1w1wvtzvt3.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="contrast"
+              >
+                vt3 ↗
+              </a>
+            </footer>
+          </article>
+
+          <!-- CARD 2 -->
+          <article>
+            <header>
+              <strong>🎨 UD-sec1-s1 NextJs Vercel Tests </strong>
+            </header>
+            <p>
+              Making a new page using pages router and deploying to vercel Added
+              pure css style animations. Note the breating doesnt require andy
+              external packages. Pay close attention to the structure of file
+              for the favicon the opengraph image and twiter image , the problem
+              you were having was due to the size of the image.
             </p>
-            <div class="hero-actions" style="margin-top: var(--pico-spacing-lg)">
-                <a href="https://github.com/wezbest/wz-ulnjs-1/tree/w1" target="_blank" rel="noopener noreferrer"
-                    role="button">
-                    Wezbest Repo →
-                </a>
+            <div class="pill-wrapper">
+              <a
+                href="https://wz-ulnjs1-w1-w-ud1-sec1.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="url-pill"
+                title="GitHub repo"
+              >
+                🐙 https://wz-ulnjs1-w1-w-ud1-sec1.vercel.app/
+              </a>
             </div>
-        </header>
+            <footer>
+              <a
+                href="https://wz-ulnjs1-w1-w-ud1-sec1.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="contrast outline"
+              >
+                ud1/sec1 ↗
+              </a>
+            </footer>
+          </article>
 
-        <!-- subtle divider line -->
-        <hr />
-
-        <!-- ================= CARDS SECTION ================= -->
-        <!-- ================= CARDS SECTION ================= -->
-        <!-- ================= CARDS SECTION ================= -->
-        <section>
-            <!-- First row of cards (3 columns) -->
-            <div class="grid">
-                <!-- CARD 1 -->
-                <article>
-                    <header>
-                        <strong>📘 Vite Tutorial Wor</strong>
-                    </header>
-                    <p>This has all the vite tutorial work</p>
-                    <div class="pill-wrapper">
-                        <a href="https://wezbestwzuknjs1w1wvtzvt3.vercel.app/" target="_blank" rel="noopener noreferrer"
-                            class="url-pill" title="Visit documentation">
-                            🔗 https://wezbestwzuknjs1w1wvtzvt3.vercel.app/
-                        </a>
-                    </div>
-                    <footer>
-                        <a href="https://wezbestwzuknjs1w1wvtzvt3.vercel.app/" target="_blank" rel="noopener noreferrer"
-                            role="button" class="contrast">
-                            vt3 ↗
-                        </a>
-                    </footer>
-                </article>
-
-                <!-- CARD 2 -->
-                <article>
-                    <header>
-                        <strong>🎨 UD-sec1-s1 NextJs Vercel Tests </strong>
-                    </header>
-                    <p>
-                        Making a new page using pages router and deploying to vercel Added
-                        pure css style animations. Note the breating doesnt require andy
-                        external packages. Pay close attention to the structure of file
-                        for the favicon the opengraph image and twiter image , the problem
-                        you were having was due to the size of the image.
-                    </p>
-                    <div class="pill-wrapper">
-                        <a href="https://wz-ulnjs1-w1-w-ud1-sec1.vercel.app/" target="_blank" rel="noopener noreferrer"
-                            class="url-pill" title="GitHub repo">
-                            🐙 https://wz-ulnjs1-w1-w-ud1-sec1.vercel.app/
-                        </a>
-                    </div>
-                    <footer>
-                        <a href="https://wz-ulnjs1-w1-w-ud1-sec1.vercel.app/" target="_blank" rel="noopener noreferrer"
-                            role="button" class="contrast outline">
-                            ud1/sec1 ↗
-                        </a>
-                    </footer>
-                </article>
-
-                <!-- CARD 3 -->
-                <article>
-                    <header>
-                        <strong>⚡ ud1-sec2-rcc1</strong>
-                    </header>
-                    <p>
-                        Workf or React Crash Pussy v1, Building custom components and prop
-                    </p>
-                    <div class="pill-wrapper">
-                        <a href="https://wl-ulnjs1-w1-ud1-sec2-rcc1.vercel.app/" target="_blank"
-                            rel="noopener noreferrer" class="url-pill" title="Browse live examples">
-                            🖥️ https://wl-ulnjs1-w1-ud1-sec2-rcc1.vercel.app/
-                        </a>
-                    </div>
-                    <footer>
-                        <a href="https://wl-ulnjs1-w1-ud1-sec2-rcc1.vercel.app/" target="_blank"
-                            rel="noopener noreferrer" role="button" class="contrast">
-                            Explore demos ↗
-                        </a>
-                    </footer>
-                </article>
+          <!-- CARD 3 -->
+          <article>
+            <header>
+              <strong>⚡ ud1-sec2-rcc1</strong>
+            </header>
+            <p>
+              Workf or React Crash Pussy v1, Building custom components and prop
+            </p>
+            <div class="pill-wrapper">
+              <a
+                href="https://wl-ulnjs1-w1-ud1-sec2-rcc1.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="url-pill"
+                title="Browse live examples"
+              >
+                🖥️ https://wl-ulnjs1-w1-ud1-sec2-rcc1.vercel.app/
+              </a>
             </div>
+            <footer>
+              <a
+                href="https://wl-ulnjs1-w1-ud1-sec2-rcc1.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="contrast"
+              >
+                Explore demos ↗
+              </a>
+            </footer>
+          </article>
+        </div>
 
-            <!-- Second row of cards -->
-            <div class="grid" style="margin-top: var(--pico-spacing-lg)">
-                <!-- CARD 4 -->
-                <article>
-                    <header>
-                        <strong>🖌️ Empty</strong>
-                    </header>
-                    <p>
-                        Seamless icon library support (Material, FontAwesome, Bootstrap).
-                        Utility-first color & spacing.
-                    </p>
-                    <div class="pill-wrapper">
-                        <a href="https://picocss.com/docs/icons" target="_blank" rel="noopener noreferrer"
-                            class="url-pill" title="Icon integration guide">
-                            🎨 picocss.com/docs/icons
-                        </a>
-                    </div>
-                    <footer>
-                        <a href="https://picocss.com/docs/icons" target="_blank" rel="noopener noreferrer" role="button"
-                            class="secondary outline">
-                            Icon guide →
-                        </a>
-                    </footer>
-                </article>
-
-                <!-- CARD 5 -->
-                <article>
-                    <header>
-                        <strong>🌙 Emmpty </strong>
-                    </header>
-                    <p>
-                        Automatic color scheme + manual data-theme toggle. Fully
-                        accessible and high contrast.
-                    </p>
-                    <div class="pill-wrapper">
-                        <a href="https://picocss.com/docs/themes" target="_blank" rel="noopener noreferrer"
-                            class="url-pill" title="Theme documentation">
-                            🌓 picocss.com/docs/themes
-                        </a>
-                    </div>
-                    <footer>
-                        <a href="https://picocss.com/docs/themes" target="_blank" rel="noopener noreferrer"
-                            role="button" class="contrast">
-                            Themes showcase ↗
-                        </a>
-                    </footer>
-                </article>
-
-                <!-- CARD 6 -->
-                <article>
-                    <header>
-                        <strong>🚀 Empty</strong>
-                    </header>
-                    <p>
-                        Lightweight integration with JavaScript frameworks. Works great
-                        with Alpine, Vue, React.
-                    </p>
-                    <div class="pill-wrapper">
-                        <a href="https://github.com/picocss/pico#quick-start" target="_blank" rel="noopener noreferrer"
-                            class="url-pill" title="Quick start & framework integration">
-                            ⚡ github.com/picocss/pico#quick-start
-                        </a>
-                    </div>
-                    <footer>
-                        <a href="https://github.com/picocss/pico#quick-start" target="_blank" rel="noopener noreferrer"
-                            role="button" class="outline">
-                            Integration docs ↗
-                        </a>
-                    </footer>
-                </article>
+        <!-- Second row of cards -->
+        <div class="grid" style="margin-top: var(--pico-spacing-lg)">
+          <!-- CARD 4 -->
+          <article>
+            <header>
+              <strong>🖌️ Empty</strong>
+            </header>
+            <p>
+              Seamless icon library support (Material, FontAwesome, Bootstrap).
+              Utility-first color & spacing.
+            </p>
+            <div class="pill-wrapper">
+              <a
+                href="https://picocss.com/docs/icons"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="url-pill"
+                title="Icon integration guide"
+              >
+                🎨 picocss.com/docs/icons
+              </a>
             </div>
-        </section>
+            <footer>
+              <a
+                href="https://picocss.com/docs/icons"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="secondary outline"
+              >
+                Icon guide →
+              </a>
+            </footer>
+          </article>
+
+          <!-- CARD 5 -->
+          <article>
+            <header>
+              <strong>🌙 Emmpty </strong>
+            </header>
+            <p>
+              Automatic color scheme + manual data-theme toggle. Fully
+              accessible and high contrast.
+            </p>
+            <div class="pill-wrapper">
+              <a
+                href="https://picocss.com/docs/themes"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="url-pill"
+                title="Theme documentation"
+              >
+                🌓 picocss.com/docs/themes
+              </a>
+            </div>
+            <footer>
+              <a
+                href="https://picocss.com/docs/themes"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="contrast"
+              >
+                Themes showcase ↗
+              </a>
+            </footer>
+          </article>
+
+          <!-- CARD 6 -->
+          <article>
+            <header>
+              <strong>🚀 Empty</strong>
+            </header>
+            <p>
+              Lightweight integration with JavaScript frameworks. Works great
+              with Alpine, Vue, React.
+            </p>
+            <div class="pill-wrapper">
+              <a
+                href="https://github.com/picocss/pico#quick-start"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="url-pill"
+                title="Quick start & framework integration"
+              >
+                ⚡ github.com/picocss/pico#quick-start
+              </a>
+            </div>
+            <footer>
+              <a
+                href="https://github.com/picocss/pico#quick-start"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="outline"
+              >
+                Integration docs ↗
+              </a>
+            </footer>
+          </article>
+        </div>
+      </section>
     </main>
-</body>
-
+  </body>
 </html>
