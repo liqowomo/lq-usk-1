@@ -10,7 +10,6 @@
 
 # Shii
 
-|      Shii      |       What       |
-| :------------: | :--------------: |
-|   [`W`](./W)   | Main Work Folder |
-| [`tzt`](./tzt) |  General Testst  |
+|      Shii      |      What      |
+| :------------: | :------------: |
+| [`tzt`](./tzt) | General Testst |
