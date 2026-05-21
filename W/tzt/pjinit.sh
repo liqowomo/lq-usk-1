@@ -106,9 +106,9 @@ booty1() {
 # /// Execiton ///
 
 panty() {
-	# pussy1 2>&1 | tee -a initz.sh.txt
+	pussy1 2>&1 | tee -a initz.sh.txt
 	# booty1 2>&1 | tee -a initz.sh.txt
-	wr1 2>&1 | tee -a initz.sh.txt
+	# wr1 2>&1 | tee -a initz.sh.txt
 
 }
 panty
