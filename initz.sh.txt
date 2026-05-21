@@ -1,0 +1,9 @@
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+[1;94m · · ────── PantySmellling ────── · ·
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+Thu May 21 05:24:27 AM UTC 2026
+Executing:[1;95mcurl ifconfig.co | jq[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0jq: parse error: Invalid numeric literal at line 1, column 10
+100  5188  100  5188    0     0   102k      0 --:--:-- --:--:-- --:--:--  103k
