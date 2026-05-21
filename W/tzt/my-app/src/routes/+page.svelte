@@ -1,13 +1,13 @@
 <script lang="ts">
+	import welcome from '$lib/images/1.webp';
 	import welcomeFallback from '$lib/images/svelte-welcome.png';
-	import welcome from '$lib/images/svelte-welcome.webp';
 
 	import Counter from './Counter.svelte';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>PantySmell</title>
+	<meta name="description" content="Booty Lickers" />
 </svelte:head>
 
 <section>
