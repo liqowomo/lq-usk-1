@@ -22,8 +22,8 @@
 ## Make SV
 
 ```sh
-# As per official docs -https://svelte.dev/docs/kit/creating-a-project
-bunx sv create my-app
+# As per official docs -
+bun create cloudflare@latest
 ```
 
 # Important Note About Wrangle
