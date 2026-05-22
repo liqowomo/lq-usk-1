@@ -28,8 +28,8 @@ RESET='\033[0m'
 pussy1() {
 	declare -a CMD=(
 
-		#0 -  Init new svelte project
-		"bunx sv create"
+		#0 -  Init cloudflare workers
+		"bun create cloudflare@latest"
 
 	)
 
