@@ -10,8 +10,10 @@
 
 # Shii
 
-|         Shii         |       What       |
-| :------------------: | :--------------: |
-|    [`tzt`](./tzt)    |  General Testst  |
-|    [`ncl`](./ncl)    | Logs of `ncl.sh` |
-| [`ncl.sh`](./ncl.sh) | Cleanign script  |
+|         Shii         |                       What                       |
+| :------------------: | :----------------------------------------------: |
+|    [`tzt`](./tzt)    |                  General Testst                  |
+|   [`mdoc`](./mdoc)   | [`Main Index Site`](https://mdoc-5ty.pages.dev/) |
+|     [`yt`](./yt)     |                     YT Panty                     |
+|    [`ncl`](./ncl)    |                 Logs of `ncl.sh`                 |
+| [`ncl.sh`](./ncl.sh) |                 Cleanign script                  |
