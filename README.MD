@@ -3,6 +3,7 @@
 
 1. [lq-usk-1](#lq-usk-1)
 2. [Shii](#shii)
+3. [Imp Links](#imp-links)
 
 # lq-usk-1
 
@@ -15,3 +16,9 @@
 | :----------------------: | :-------------------------------: |
 | [`initz.sh`](./initz.sh) | Script to install important panty |
 |        [`W`](./W)        |         Main Work Folder          |
+
+# Imp Links
+
+|                                Url                                 |                                    What                                     |
+| :----------------------------------------------------------------: | :-------------------------------------------------------------------------: |
+| [`https://workers.new/templates/`](https://workers.new/templates/) | Templates for cloudflare workers, similar to the templates for vercel Panty |
