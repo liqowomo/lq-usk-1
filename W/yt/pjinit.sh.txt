@@ -1,0 +1,455 @@
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+[1;94m · · ────── PantySmellling ────── · ·
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+Sat May 23 12:23:07 PM UTC 2026
+Executing:[1;95mbun create cloudflare@latest[0m
+Resolving dependencies
+Resolved, downloaded and extracted [2]
+Saved lockfile
+
+
+👋 Welcome to create-cloudflare v2.68.3!
+🧡 Let's get started.
+📊 Cloudflare collects telemetry about your usage of Create-Cloudflare.
+
+Learn more at: ]8;;https://github.com/cloudflare/workers-sdk/blob/main/packages/create-cloudflare/telemetry.md\https://github.com/cloudflare/workers-sdk/blob/main/packages/create-cloudflare/telemetry.md]8;;\
+
+
+╭ Create an application with Cloudflare Step 1 of 3
+│
+[?25l╰ In which directory do you want to create your application? also used as application name
+  ./cool-night-9947
+[999D[2A[1B[2K[G  ./a█[1B[999D[2A[1B[2K[G  ./as█[1B[999D[2A[1B[2K[G  ./asd█[1B[999D[2A[1B[2K[G  ./as█[1B[999D[2A[1B[2K[G  ./a█[1B[999D[2A[1B[2K[G  ./█[1B[999D[2A[1B[2K[G  ./y█[1B[999D[2A[1B[2K[G  ./y1█[1B[999D[2A[J├ In which directory do you want to create your application?
+│ dir ./y1
+│
+[?25h[?25l╰ What would you like to start with? 
+  ● Hello World example 
+  ○ Framework Starter 
+  ○ Application Starter 
+  ○ Template from a GitHub repo 
+  ◁ Go back 
+
+  Select from barebones examples to get started with Workers  
+[999D[8A[1B[J  ○ Hello World example 
+  ● Framework Starter 
+  ○ Application Starter 
+  ○ Template from a GitHub repo 
+  ◁ Go back 
+
+  Select from the most popular full-stack web frameworks  
+[999D[8A[J├ What would you like to start with?
+│ category Framework Starter
+│
+[?25h[?25l╰ Which development framework do you want to use? 
+  ● Analog 
+  ○ Angular 
+  ○ Astro 
+  ○ Docusaurus 
+  ○ Gatsby 
+  ○ Hono 
+  ○ Next.js 
+  ○ Nuxt 
+  ○ Qwik 
+  ○ React 
+  ○ React Router (formerly Remix) 
+  ○ RedwoodSDK 
+  ○ SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[J  ○ Analog 
+  ● Angular 
+  ○ Astro 
+  ○ Docusaurus 
+  ○ Gatsby 
+  ○ Hono 
+  ○ Next.js 
+  ○ Nuxt 
+  ○ Qwik 
+  ○ React 
+  ○ React Router (formerly Remix) 
+  ○ RedwoodSDK 
+  ○ SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[1B[J  ○ Angular 
+  ● Astro 
+  ○ Docusaurus 
+  ○ Gatsby 
+  ○ Hono 
+  ○ Next.js 
+  ○ Nuxt 
+  ○ Qwik 
+  ○ React 
+  ○ React Router (formerly Remix) 
+  ○ RedwoodSDK 
+  ○ SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[2B[J  ○ Astro 
+  ● Docusaurus 
+  ○ Gatsby 
+  ○ Hono 
+  ○ Next.js 
+  ○ Nuxt 
+  ○ Qwik 
+  ○ React 
+  ○ React Router (formerly Remix) 
+  ○ RedwoodSDK 
+  ○ SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[3B[J  ○ Docusaurus 
+  ● Gatsby 
+  ○ Hono 
+  ○ Next.js 
+  ○ Nuxt 
+  ○ Qwik 
+  ○ React 
+  ○ React Router (formerly Remix) 
+  ○ RedwoodSDK 
+  ○ SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[4B[J  ○ Gatsby 
+  ● Hono 
+  ○ Next.js 
+  ○ Nuxt 
+  ○ Qwik 
+  ○ React 
+  ○ React Router (formerly Remix) 
+  ○ RedwoodSDK 
+  ○ SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[5B[J  ○ Hono 
+  ● Next.js 
+  ○ Nuxt 
+  ○ Qwik 
+  ○ React 
+  ○ React Router (formerly Remix) 
+  ○ RedwoodSDK 
+  ○ SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[6B[J  ○ Next.js 
+  ● Nuxt 
+  ○ Qwik 
+  ○ React 
+  ○ React Router (formerly Remix) 
+  ○ RedwoodSDK 
+  ○ SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[7B[J  ○ Nuxt 
+  ● Qwik 
+  ○ React 
+  ○ React Router (formerly Remix) 
+  ○ RedwoodSDK 
+  ○ SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[8B[J  ○ Qwik 
+  ● React 
+  ○ React Router (formerly Remix) 
+  ○ RedwoodSDK 
+  ○ SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[9B[J  ○ React 
+  ● React Router (formerly Remix) 
+  ○ RedwoodSDK 
+  ○ SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[10B[J  ○ React Router (formerly Remix) 
+  ● RedwoodSDK 
+  ○ SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[11B[J  ○ RedwoodSDK 
+  ● SolidStart 
+  ○ SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[12B[J  ○ SolidStart 
+  ● SvelteKit 
+  ○ TanStack Start 
+  ○ Vike 
+  ○ Vue 
+  ○ Waku 
+  ◁ Go back 
+[999D[20A[J├ Which development framework do you want to use?
+│ framework SvelteKit
+│
+[?25h├ Select your deployment platform
+│ platform Workers with Assets
+│
+├ Continue with SvelteKit via `bunx sv@0.15.3 create y1`
+│
+
+
+HINT: Run "sv --help" to get the full list of commands, add-ons, and examples to one-shot and skip interactive prompts.
+┌  Welcome to the Svelte CLI! (v0.15.3)
+[?25l│
+◆  Which template would you like?
+│  ● SvelteKit minimal (barebones scaffolding for your new app)
+│  ○ SvelteKit demo
+│  ○ Svelte library
+└
+[999D[6A[1B[J◇  Which template would you like?
+│  SvelteKit minimal
+[?25h[?25l│
+◆  Add type checking with TypeScript?
+│  ● Yes, using TypeScript syntax
+│  ○ Yes, using JavaScript with JSDoc comments
+│  ○ No
+└
+[999D[6A[2B[J│  ○ Yes, using TypeScript syntax
+│  ● Yes, using JavaScript with JSDoc comments
+│  ○ No
+└
+[999D[6A[1B[J◇  Add type checking with TypeScript?
+│  Yes, using JavaScript with JSDoc comments
+[?25h[?25l│
+◆  What would you like to add to your project? (use arrow keys / space bar)
+│  ◻ prettier (formatter - https://prettier.io)
+│  ◻ eslint
+│  ◻ vitest
+│  ◻ playwright
+│  ◻ tailwindcss
+│  ◻ sveltekit-adapter
+│  ◻ drizzle
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[2B[J│  ◻ prettier
+│  ◻ eslint (linter - https://eslint.org)
+│  ◻ vitest
+│  ◻ playwright
+│  ◻ tailwindcss
+│  ◻ sveltekit-adapter
+│  ◻ drizzle
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[3B[J│  ◻ eslint
+│  ◻ vitest (unit testing - https://vitest.dev)
+│  ◻ playwright
+│  ◻ tailwindcss
+│  ◻ sveltekit-adapter
+│  ◻ drizzle
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[4B[J│  ◻ vitest
+│  ◻ playwright (browser testing - https://playwright.dev)
+│  ◻ tailwindcss
+│  ◻ sveltekit-adapter
+│  ◻ drizzle
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[5B[J│  ◻ playwright
+│  ◻ tailwindcss (css framework - https://tailwindcss.com)
+│  ◻ sveltekit-adapter
+│  ◻ drizzle
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[6B[J│  ◻ tailwindcss
+│  ◻ sveltekit-adapter (deployment - https://svelte.dev/docs/kit/adapters)
+│  ◻ drizzle
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[7B[J│  ◻ sveltekit-adapter
+│  ◻ drizzle (database orm - https://orm.drizzle.team)
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[8B[J│  ◻ drizzle
+│  ◻ better-auth (auth library - https://www.better-auth.com)
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[9B[J│  ◻ better-auth
+│  ◻ mdsvex (svelte + markdown - https://mdsvex.pngwn.io)
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[10B[J│  ◻ mdsvex
+│  ◻ paraglide (i18n - https://inlang.com/m/gerre34r/library-inlang-paraglideJs)
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[11B[J│  ◻ paraglide
+│  ◻ storybook (frontend workshop - https://storybook.js.org)
+│  ◻ mcp
+└
+[999D[15A[11B[J│  ◻ paraglide (i18n - https://inlang.com/m/gerre34r/library-inlang-paraglideJs)
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[10B[J│  ◻ mdsvex (svelte + markdown - https://mdsvex.pngwn.io)
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[9B[J│  ◻ better-auth (auth library - https://www.better-auth.com)
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[8B[J│  ◻ drizzle (database orm - https://orm.drizzle.team)
+│  ◻ better-auth
+│  ◻ mdsvex
+│  ◻ paraglide
+│  ◻ storybook
+│  ◻ mcp
+└
+[999D[15A[8B[2K[G│  ◼ drizzle (database orm - https://orm.drizzle.team)[7B[999D[15A[1B[J◇  What would you like to add to your project? (use arrow keys / space bar)
+│  drizzle
+[?25h[?25l│
+◆  Which database would you like to use?
+│  ○ PostgreSQL
+│  ○ MySQL
+│  ● SQLite
+│  ○ Cloudflare D1
+└
+[999D[7A[1B[J◇  Which database would you like to use?
+│  SQLite
+[?25h[?25l│
+◆  Which SQLite client would you like to use?
+│  ○ better-sqlite3
+│  ● libSQL (for serverless environments)
+│  ○ Turso
+└
+[999D[6A[1B[J◇  Which SQLite client would you like to use?
+│  libSQL
+[?25h│
+◆  Project created
+│
+◆  Successfully setup add-ons: drizzle
+│
+│  To skip prompts next time, run:
+●  bun x sv@0.15.3 create --template minimal --types jsdoc --add drizzle="database:sqlite+sqlite:libsql" --install bun y1
+│
+◇  Installing dependencies with bun...
+[2K[1A[2K[G[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G│
+◆  Successfully installed dependencies with bun
+│
+◇  What's next? ─────────────────────────────────────────────────╮
+│                                                                │
+│  📁 Project steps                                              │
+│                                                                │
+│    1: cd y1                                                    │
+│    2: bun run dev --open                                       │
+│                                                                │
+│  To close the dev server, hit Ctrl-C                           │
+│                                                                │
+│  🧩 Add-on steps                                               │
+│                                                                │
+│    drizzle:                                                    │
+│      - Check DATABASE_URL in .env and adjust it to your needs  │
+│      - Run bun run db:push to update your database schema      │
+│                                                                │
+│  Stuck? Visit us at https://svelte.dev/chat                    │
+│                                                                │
+├────────────────────────────────────────────────────────────────╯
+│
+└  You're all set!
+
+
+├ Copying template files
+│ files copied to project directory
+│
+╰ Application created 
+
+╭ Configuring your application for Cloudflare Step 2 of 3
+│
+├ Retrieving current workerd compatibility date
+│ compatibility date 2026-05-23
+│
+├ Changing adapter in svelte.config.js
+│
+╰  ERROR  Error: Error parsing file: svelte.config.js
+[1;92mDone!
+───── ⋆⋅☆⋅⋆ ─────[0m
+───── ⋆⋅☆⋅⋆ ─────[0m
+───── ⋆⋅☆⋅⋆ ─────[0m
