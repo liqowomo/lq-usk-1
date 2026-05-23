@@ -6,6 +6,8 @@
 3. [ImpCmd](#impcmd)
    1. [Make SV](#make-sv)
 4. [Important Note About Wrangle](#important-note-about-wrangle)
+5. [Project List](#project-list)
+   1. [Default Insall Command](#default-insall-command)
 
 # What
 
@@ -40,3 +42,16 @@ bunx wrangler whoami
 ```
 
 3 . This is safer way of setting up the shii
+
+# Project List
+
+## Default Insall Command
+
+```sh
+# Cloudflare official Install command
+bun create cloudflare@latest y1 --framework=svelte --platform=workers
+```
+
+1. Note this folder is for testing out interesting sveltekit and d1 projects That was the reason to start this panty
+2. It seems both `drizzle` and `better-auth` have trouble when trying to install with the above command
+3. The better approach is to get the worker first deployed, and the do the subsequent next steps
