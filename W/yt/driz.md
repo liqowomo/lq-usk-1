@@ -701,50 +701,6 @@ If you absolutely need to move specific local data to production (like configura
 
 Here's a Mermaid diagram that explains the complete D1 + Drizzle workflow for local development and production:
 
-```mermaid
-flowchart TD
-    subgraph "YOUR LOCAL MACHINE"
-        A[📝 Edit schema.ts<br/>Add/change tables] --> B[🏃 Run: bun run db:generate]
-        B --> C[📁 Drizzle generates migration files<br/>in /drizzle folder]
-        C --> D{Which environment?}
-
-        D -->|Local Testing| E[🏃 Run: bun run db:d1:migrate:local]
-        D -->|Production| F[🏃 Run: bun run db:d1:migrate]
-
-        E --> G[🖥️ LOCAL D1 Database<br/>(SQLite file via Miniflare)]
-        F --> H[☁️ REMOTE D1 Database<br/>(Cloudflare's network)]
-
-        G --> I[🧪 Test with test data<br/>bun run preview]
-
-        I --> J{Changes work?}
-        J -->|No| A
-        J -->|Yes| K[📦 Commit migration files to Git]
-
-        K --> L[🚀 Deploy to Cloudflare<br/>bun run deploy]
-        L --> H
-    end
-
-    subgraph "DEVELOPMENT WORKFLOWS"
-        M[💻 Daily Development] --> N[Use local D1<br/>bun run preview]
-        N --> O[Add test data manually<br/>or via seed script]
-        O --> P[Test features]
-        P --> Q[Make schema changes<br/>repeat migration cycle]
-    end
-
-    subgraph "PRODUCTION DATA MANAGEMENT"
-        R[📊 Production data] --> S{Need to add data?}
-        S -->|Initial setup| T[Create seed script<br/>with production-safe data]
-        S -->|Ongoing| U[Use D1 dashboard<br/>or SQL commands]
-        T --> V[Run: bun run db:seed:remote]
-        U --> W[wrangler d1 execute<br/>my-app-db --command='...']
-    end
-
-    style G fill:#90EE90
-    style H fill:#FFB6C1
-    style J fill:#FFD700
-    style A fill:#87CEEB
-```
-
 ## Key Process Explained Visually:
 
 ```mermaid
