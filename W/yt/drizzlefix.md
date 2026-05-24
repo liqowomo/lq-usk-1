@@ -845,19 +845,14 @@ flowchart TD
         A["Edit schema.ts / Add or change tables"] --> B["Run: bun run db:generate"]
         B --> C["Drizzle generates migration files in /drizzle folder"]
         C --> D{Which environment?}
-
         D -->|Local Testing| E["Run: bun run db:d1:migrate:local"]
         D -->|Production| F["Run: bun run db:d1:migrate"]
-
-        E --> G["LOCAL D1 Database\n(SQLite file via Miniflare)"]
-        F --> H["REMOTE D1 Database\n(Cloudflare's network)"]
-
+        E --> G["LOCAL D1 Database (SQLite file via Miniflare)"]
+        F --> H["REMOTE D1 Database (Cloudflare network)"]
         G --> I["Test with test data / bun run preview"]
-
         I --> J{Changes work?}
         J -->|No| A
         J -->|Yes| K["Commit migration files to Git"]
-
         K --> L["Deploy to Cloudflare / bun run deploy"]
         L --> H
     end
@@ -874,7 +869,7 @@ flowchart TD
         S -->|Initial setup| T["Create seed script with production-safe data"]
         S -->|Ongoing| U["Use D1 dashboard or SQL commands"]
         T --> V["Run: bun run db:seed:remote"]
-        U --> W["wrangler d1 execute my-app-db --command='...'"]
+        U --> W["wrangler d1 execute my-app-db --command"]
     end
 
     style G fill:#90EE90
