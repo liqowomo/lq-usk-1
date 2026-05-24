@@ -840,31 +840,47 @@ mindmap
 ## The "Noob-Friendly" Explanation:
 
 ```mermaid
-flowchart TB
-    Start([You want to add a<br/>'phone_number' column])
+flowchart TD
+    subgraph "YOUR LOCAL MACHINE"
+        A["📝 Edit schema.ts / Add/change tables"] --> B["🏃 Run: bun run db:generate"]
+        B --> C["📁 Drizzle generates migration files in /drizzle folder"]
+        C --> D{Which environment?}
 
-    Start --> Step1[1. Edit schema.ts<br/>Add phone_number column]
-    Step1 --> Step2[2. Run: bun run db:generate<br/>Drizzle creates migration file]
-    Step2 --> Step3[3. Run: bun run db:d1:migrate:local<br/>Adds column to YOUR computer's D1]
+        D -->|Local Testing| E["🏃 Run: bun run db:d1:migrate:local"]
+        D -->|Production| F["🏃 Run: bun run db:d1:migrate"]
 
-    Step3 --> Step4[4. Add test phone numbers<br/>to local D1]
-    Step4 --> Step5[5. Test everything locally]
+        E --> G["🖥️ LOCAL D1 Database (SQLite file via Miniflare)"]
+        F --> H["☁️ REMOTE D1 Database (Cloudflare's network)"]
 
-    Step5 --> Question{Everything work?}
-    Question -->|No| Step1
-    Question -->|Yes| Step6[6. Commit migration files to Git]
+        G --> I["🧪 Test with test data / bun run preview"]
 
-    Step6 --> Step7[7. Run: bun run db:d1:migrate<br/>Adds column to Cloudflare's D1]
-    Step7 --> Step8[8. Deploy your app]
+        I --> J{Changes work?}
+        J -->|No| A
+        J -->|Yes| K["📦 Commit migration files to Git"]
 
-    Step8 --> Warning[⚠️ Your test phone numbers<br/>did NOT go to production]
-    Warning --> Final[9. Add real phone numbers<br/>to production separately]
+        K --> L["🚀 Deploy to Cloudflare / bun run deploy"]
+        L --> H
+    end
 
-    Final --> End([Done!])
+    subgraph "DEVELOPMENT WORKFLOWS"
+        M["💻 Daily Development"] --> N["Use local D1 / bun run preview"]
+        N --> O["Add test data manually or via seed script"]
+        O --> P["Test features"]
+        P --> Q["Make schema changes / repeat migration cycle"]
+    end
 
-    style Step4 fill:#FFE4B5
-    style Step8 fill:#90EE90
-    style Warning fill:#FFB6C1
+    subgraph "PRODUCTION DATA MANAGEMENT"
+        R["📊 Production data"] --> S{Need to add data?}
+        S -->|Initial setup| T["Create seed script with production-safe data"]
+        S -->|Ongoing| U["Use D1 dashboard or SQL commands"]
+        T --> V["Run: bun run db:seed:remote"]
+        U --> W["wrangler d1 execute my-app-db --command='...'"]
+    end
+
+    style G fill:#90EE90
+    style H fill:#FFB6C1
+    style J fill:#FFD700
+    style A fill:#87CEEB
 ```
 
 **Key Takeaway:**
