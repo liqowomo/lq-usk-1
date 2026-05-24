@@ -44,7 +44,7 @@ Based on current Cloudflare and Svelte documentation, here's a fresh start-to-fi
    21. [Key Process Explained Visually:](#key-process-explained-visually)
    22. [The Critical Concept:](#the-critical-concept)
    23. [Simple Summary in Mermaid Mind Map:](#simple-summary-in-mermaid-mind-map)
-   24. [The "Noob-Friendly" Explanation:](#the-noob-friendly-explanation)
+   24. [The "Noob-Friendly" Explanation: - Fixed](#the-noob-friendly-explanation---fixed)
 
 ## The Problem You Encountered
 
@@ -837,7 +837,7 @@ mindmap
       Use same migrations everywhere
 ```
 
-## The "Noob-Friendly" Explanation:
+## The "Noob-Friendly" Explanation: - Fixed
 
 ```mermaid
 flowchart TD
