@@ -28,6 +28,19 @@ Based on current Cloudflare and Svelte documentation, here's a fresh start-to-fi
        5. [Practical Workflow](#practical-workflow)
        6. [Important Gotchas](#important-gotchas)
        7. [Your Scripts Are Correct!](#your-scripts-are-correct)
+   15. [Why You Can't Just "Push" Local D1 Data](#why-you-cant-just-push-local-d1-data)
+   16. [The Correct Workflow: Migrations + Seeding](#the-correct-workflow-migrations--seeding)
+       1. [Step 1: Schema Changes (Migrations)](#step-1-schema-changes-migrations)
+       2. [Step 2: Data Management (The Real Answer to Your Question)](#step-2-data-management-the-real-answer-to-your-question)
+          1. [Option A: Create a Seed Script (Recommended)](#option-a-create-a-seed-script-recommended)
+          2. [Option B: Use SQL Dumps (For One-Time Data Transfer)](#option-b-use-sql-dumps-for-one-time-data-transfer)
+          3. [Option C: Write a Sync Script (Advanced)](#option-c-write-a-sync-script-advanced)
+   17. [The Standard D1 Workflow (Best Practice)](#the-standard-d1-workflow-best-practice)
+       1. [Development Cycle:](#development-cycle)
+       2. [For Production Data Management:](#for-production-data-management)
+   18. [What About Data from Local Testing?](#what-about-data-from-local-testing)
+   19. [Quick Reference Commands](#quick-reference-commands)
+   20. [The Bottom Line](#the-bottom-line)
 
 ## The Problem You Encountered
 
@@ -465,3 +478,219 @@ The scripts from the previous guide properly separate local and production:
 - No flag or `--remote` → affects your production D1 (use carefully)
 
 So yes — when you're developing locally with `bun run preview`, you're working with a completely safe, local copy of D1. Your production data stays untouched until you explicitly run migrations or deploy with `--remote` flags.
+
+Good question! The short answer is: **you can't directly push local data to remote D1** - you need to use migrations and seed scripts. Here's why and how to handle it properly.
+
+## Why You Can't Just "Push" Local D1 Data
+
+Local D1 and remote D1 are **completely separate databases** with different:
+
+- File locations (local is on your machine, remote is on Cloudflare's network)
+- Data contents (local has test data, remote has production data)
+- Connection methods (local uses Miniflare, remote uses actual D1 API)
+
+You can't just copy the local `.db` file to production - that would break everything.
+
+## The Correct Workflow: Migrations + Seeding
+
+### Step 1: Schema Changes (Migrations)
+
+When you change your schema locally, you generate and test migrations:
+
+```bash
+# 1. Change your schema in schema.ts
+# 2. Generate migration files
+bun run db:generate
+
+# 3. Test migration on local D1 first
+bun run db:d1:migrate:local
+
+# 4. Verify everything works locally
+bun run preview
+```
+
+Then apply the **same migrations** to remote:
+
+```bash
+# 5. Apply to production D1
+bun run db:d1:migrate
+```
+
+**Important:** This only changes the schema structure, not the data.
+
+### Step 2: Data Management (The Real Answer to Your Question)
+
+For moving data from local to remote, you have several options:
+
+#### Option A: Create a Seed Script (Recommended)
+
+Create `scripts/seed.ts`:
+
+```typescript
+// scripts/seed.ts
+import { createDb } from "../src/lib/server/db"
+import { users } from "../src/lib/server/db/schema"
+
+// For local seeding
+async function seedLocal() {
+  // Your local test data
+  const testUsers = [
+    { name: "Test User 1", email: "test1@example.com" },
+    { name: "Test User 2", email: "test2@example.com" },
+  ]
+
+  // This runs against your local D1
+  // You'd need to adapt this based on your setup
+  console.log("Seeding local D1...")
+  // Implementation depends on your D1 access method
+}
+
+// For production seeding
+async function seedProduction() {
+  // Ask for confirmation first!
+  console.log("⚠️  This will add data to PRODUCTION D1")
+  console.log("Press Ctrl+C to cancel or Enter to continue")
+  await Bun.stdin.text()
+
+  // Your production seed data
+  const initialData = [{ name: "Admin User", email: "admin@example.com" }]
+
+  // Apply to production D1 via wrangler
+  // Using wrangler d1 execute with SQL
+}
+
+// Run based on command line arg
+if (process.argv.includes("--local")) {
+  seedLocal()
+} else if (process.argv.includes("--remote")) {
+  seedProduction()
+}
+```
+
+Add to package.json:
+
+```json
+"db:seed:local": "bun run scripts/seed.ts --local",
+"db:seed:remote": "bun run scripts/seed.ts --remote"
+```
+
+#### Option B: Use SQL Dumps (For One-Time Data Transfer)
+
+Export data from local D1:
+
+```bash
+# Export local data to SQL file
+wrangler d1 execute my-app-db --local --command=".dump" > local-backup.sql
+```
+
+**⚠️ WARNING:** Don't just import this to production! Clean it up first:
+
+```bash
+# Extract only INSERT statements (exclude schema)
+grep "^INSERT" local-backup.sql > data-only.sql
+
+# Review the data carefully!
+cat data-only.sql
+
+# Apply to remote (if you're sure)
+wrangler d1 execute my-app-db --file=data-only.sql
+```
+
+#### Option C: Write a Sync Script (Advanced)
+
+Create `scripts/sync-local-to-remote.ts`:
+
+```typescript
+// This is a complex operation - use with extreme caution!
+import { localDb } from "../src/lib/server/db/local"
+import { createDb } from "../src/lib/server/db"
+
+async function syncData() {
+  console.log("🔴 WARNING: This will overwrite production data")
+  console.log('Type "CONFIRM" to continue:')
+
+  const confirmation = await Bun.stdin.text()
+  if (confirmation.trim() !== "CONFIRM") {
+    console.log("Sync cancelled")
+    return
+  }
+
+  // Read data from local
+  const localUsers = await localDb.select().from(users)
+
+  // Connect to production (needs proper D1 binding)
+  // This is tricky in scripts - better to use wrangler commands
+
+  console.log(`Would sync ${localUsers.length} users to production`)
+  // Implementation would require proper D1 client setup
+}
+```
+
+## The Standard D1 Workflow (Best Practice)
+
+Here's what most teams actually do:
+
+### Development Cycle:
+
+```bash
+# 1. Work locally with test data
+bun run preview
+
+# 2. Make schema changes
+bun run db:generate
+bun run db:d1:migrate:local
+
+# 3. Test everything with local D1
+# ... develop features ...
+
+# 4. For production, only apply schema changes
+bun run db:d1:migrate
+```
+
+### For Production Data Management:
+
+```bash
+# To add initial/seed data to production
+bun run db:seed:remote
+
+# To update production data (use D1's UPDATE/INSERT directly)
+wrangler d1 execute my-app-db --command="UPDATE users SET status='active' WHERE id=1"
+
+# NEVER try to "sync" local test data to production
+```
+
+## What About Data from Local Testing?
+
+**You generally don't want to push local test data to production.** Local data is:
+
+- Fake/test data (emails like `test@example.com`)
+- Created for edge cases
+- Potentially insecure (passwords, tokens)
+
+Instead, you should:
+
+1. **Keep migrations separate** from data
+2. **Create production seeds** that are safe for real users
+3. **Use the D1 dashboard** or SQL to add production data manually when needed
+
+## Quick Reference Commands
+
+| What you want                  | Command                                                         |
+| ------------------------------ | --------------------------------------------------------------- |
+| Apply schema changes to remote | `bun run db:d1:migrate`                                         |
+| Apply schema changes to local  | `bun run db:d1:migrate:local`                                   |
+| See local D1 data              | `bun run db:local:studio`                                       |
+| See remote D1 data             | `wrangler d1 execute my-app-db --command="SELECT * FROM users"` |
+| Run SQL on remote              | `wrangler d1 execute my-app-db --command="your sql"`            |
+| Run SQL on local               | `wrangler d1 execute my-app-db --local --command="your sql"`    |
+
+## The Bottom Line
+
+**You cannot "push" local D1 data to remote D1** because they're separate database instances. Instead:
+
+- Use **migrations** for schema changes
+- Use **seed scripts** for data
+- Keep test data local
+- Create proper production data separately
+
+If you absolutely need to move specific local data to production (like configuration records), export them as INSERT statements, review carefully, and apply them manually. But in practice, you'll almost never want to directly copy your test data to production.
