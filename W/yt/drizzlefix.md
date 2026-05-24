@@ -842,35 +842,35 @@ mindmap
 ```mermaid
 flowchart TD
     subgraph "YOUR LOCAL MACHINE"
-        A["📝 Edit schema.ts / Add/change tables"] --> B["🏃 Run: bun run db:generate"]
-        B --> C["📁 Drizzle generates migration files in /drizzle folder"]
+        A["Edit schema.ts / Add or change tables"] --> B["Run: bun run db:generate"]
+        B --> C["Drizzle generates migration files in /drizzle folder"]
         C --> D{Which environment?}
 
-        D -->|Local Testing| E["🏃 Run: bun run db:d1:migrate:local"]
-        D -->|Production| F["🏃 Run: bun run db:d1:migrate"]
+        D -->|Local Testing| E["Run: bun run db:d1:migrate:local"]
+        D -->|Production| F["Run: bun run db:d1:migrate"]
 
-        E --> G["🖥️ LOCAL D1 Database (SQLite file via Miniflare)"]
-        F --> H["☁️ REMOTE D1 Database (Cloudflare's network)"]
+        E --> G["LOCAL D1 Database\n(SQLite file via Miniflare)"]
+        F --> H["REMOTE D1 Database\n(Cloudflare's network)"]
 
-        G --> I["🧪 Test with test data / bun run preview"]
+        G --> I["Test with test data / bun run preview"]
 
         I --> J{Changes work?}
         J -->|No| A
-        J -->|Yes| K["📦 Commit migration files to Git"]
+        J -->|Yes| K["Commit migration files to Git"]
 
-        K --> L["🚀 Deploy to Cloudflare / bun run deploy"]
+        K --> L["Deploy to Cloudflare / bun run deploy"]
         L --> H
     end
 
     subgraph "DEVELOPMENT WORKFLOWS"
-        M["💻 Daily Development"] --> N["Use local D1 / bun run preview"]
+        M["Daily Development"] --> N["Use local D1 / bun run preview"]
         N --> O["Add test data manually or via seed script"]
         O --> P["Test features"]
         P --> Q["Make schema changes / repeat migration cycle"]
     end
 
     subgraph "PRODUCTION DATA MANAGEMENT"
-        R["📊 Production data"] --> S{Need to add data?}
+        R["Production data"] --> S{Need to add data?}
         S -->|Initial setup| T["Create seed script with production-safe data"]
         S -->|Ongoing| U["Use D1 dashboard or SQL commands"]
         T --> V["Run: bun run db:seed:remote"]
