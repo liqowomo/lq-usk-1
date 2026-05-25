@@ -22,7 +22,7 @@
       "database_name": "panty-smell",
       "database_id": "cec2dd44-05e2-4190-ac82-14b21981a094",
       "migrations_dir": "./src/lib/server/db/migrations",
-      "remote": true,
+      //   "remote": true,
     },
   ],
   /**
