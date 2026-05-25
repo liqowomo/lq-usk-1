@@ -1,9 +1,9 @@
-// place files you want to import through the `$lib` alias in this folder.
+import { env } from "$env/dynamic/private"
 import { createClient } from "@libsql/client"
 import { drizzle } from "drizzle-orm/libsql"
 
 const client = createClient({
-  url: process.env.DATABASE_URL!,
+  url: env.DATABASE_URL!, // Uses $env for better security
 })
 
 export const db = drizzle(client)

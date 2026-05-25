@@ -1,12 +1,18 @@
-// ----------------------------------
-// schema.ts - Here you define the tables - Default schema
-// ----------------------------------
-
+import { sql } from "drizzle-orm"
 import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core"
 
-export const users = sqliteTable("users", {
-  id: integer("id").primaryKey(),
-  age: integer("age"),
+// All your tables in ONE file (or import from s2.ts)
+export const mistressBook = sqliteTable("mistress_book", {
+  id: integer().primaryKey(),
+  name: text().notNull(),
+  message: text().notNull(),
+  fetish: text().notNull(),
+  country: text(),
+  createdAt: text("created_at").default(sql`CURRENT_TIMESTAMP`),
+})
 
-  fetish: text("fetish"),
+export const users = sqliteTable("users", {
+  id: integer().primaryKey(),
+  age: integer(),
+  fetish: text(),
 })
