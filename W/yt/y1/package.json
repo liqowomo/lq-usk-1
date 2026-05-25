@@ -41,6 +41,8 @@
   },
   "dependencies": {
     "@libsql/client": "^0.17.3",
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.38.0",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2"
   }

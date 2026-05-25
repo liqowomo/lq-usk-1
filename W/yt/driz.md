@@ -217,6 +217,8 @@ declare global {
 export {}
 ```
 
+- Note this step can be automated with the command - `wrangler types`
+
 ---
 
 ## Step 11: Create Page Server Logic

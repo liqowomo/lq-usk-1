@@ -1,4 +1,6 @@
 import { mistressBook } from "$lib/server/db/schema"
+import { Ratelimit } from "@upstash/ratelimit"
+import { Redis } from "@upstash/redis"
 import { desc } from "drizzle-orm"
 import type { Actions, PageServerLoad } from "./$types"
 
@@ -14,22 +16,23 @@ export const load: PageServerLoad = async ({ locals }) => {
 
 export const actions: Actions = {
   default: async ({ request, locals, platform, getClientAddress }) => {
-    // Rate limiting - get client IP address
-    const clientIp = getClientAddress()
-    const rateLimiter = platform?.env?.RATE_LIMITER
+    const ratelimit = new Ratelimit({
+      redis: new Redis({
+        url: platform?.env?.UPSTASH_REDIS_REST_URL,
+        token: platform?.env?.UPSTASH_REDIS_REST_TOKEN,
+      }),
+      limiter: Ratelimit.slidingWindow(2, "7 d"),
+    })
 
-    if (rateLimiter) {
-      const { success } = await rateLimiter.limit({ key: clientIp })
+    const { success } = await ratelimit.limit(getClientAddress())
 
-      if (!success) {
-        return {
-          success: false,
-          error: "STOP!!!!",
-        }
+    if (!success) {
+      return {
+        success: false,
+        error: "FUCKOFFF",
       }
     }
 
-    // Process the form submission
     const formData = await request.formData()
     const name = formData.get("name")
     const message = formData.get("message")

@@ -12,9 +12,6 @@
     "binding": "ASSETS",
     "directory": ".svelte-kit/cloudflare",
   },
-  "observability": {
-    "enabled": true,
-  },
   "upload_source_maps": true,
   "d1_databases": [
     {
@@ -48,14 +45,20 @@
    * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
    */
   // "services": [  {   "binding": "MY_SERVICE",   "service": "my-service"  } ]
-  "ratelimits": [
-    {
-      "name": "RATE_LIMITER",
-      "namespace_id": "1001", // Any positive integer, unique per rate limiter
-      "simple": {
-        "limit": 10, // Number of requests allowed
-        "period": 60, // Time window in seconds (only 10 or 60 allowed)
-      },
+  // New rate limiter with redis
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true,
     },
-  ],
+    "traces": {
+      "enabled": false,
+      "persist": true,
+      "head_sampling_rate": 1,
+    },
+  },
 }
