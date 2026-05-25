@@ -24,7 +24,7 @@ function getRatelimit(platform: App.Platform | undefined) {
   try {
     ratelimitInstance = new Ratelimit({
       redis: new Redis({ url, token }),
-      limiter: Ratelimit.slidingWindow(10, "60 s"),
+      limiter: Ratelimit.slidingWindow(2, "7 d"),
     })
     return ratelimitInstance
   } catch (error) {
