@@ -88,6 +88,10 @@ bun add -d drizzle-kit
 
 # For local SQLite testing (optional but recommended)
 bun add @libsql/client
+
+# From the https://orm.drizzle.team/docs/get-started/d1-new
+bun add drizzle-orm wrangler dotenv
+bun add -D drizzle-kit tsx
 ```
 
 ---
