@@ -1,4 +1,9 @@
 <script>
+  import Card from "$lib/comp/Card.svelte"
+  function onclick() {
+    console.log("Clicked from function")
+  }
+  let numberOne = 1
 </script>
 
 <svelte:head>
@@ -42,5 +47,17 @@
       </a>
       to read the documentation
     </p>
+
+    <button
+      class="px-6 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer border-2 border-rose-400 text-rose-300 bg-transparent hover:bg-rose-400/10 hover:shadow-lg hover:shadow-rose-500/20 hover:border-rose-300"
+      onclick={() => alert("Suck And Fuck")}>Click Me</button
+    >
+    <button {onclick}>Click Me</button>
+
+    <p>Displaying Variable {numberOne}</p>
+
+    <Card title="Fast Performance">
+      Built on Svelte's compiler, SvelteKit delivers blazing fast page loads.
+    </Card>
   </section>
 </main>
