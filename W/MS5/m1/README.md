@@ -15,7 +15,7 @@ To recreate this project with the same configuration:
 
 ```sh
 # recreate this project
-bun x sv@0.15.3 create --template minimal --types jsdoc --add prettier --install bun m1
+bun x sv@0.15.3 create --template minimal --types jsdoc --add tailwindcss="plugins:typography,forms" --install bun m1
 ```
 
 ## Developing
