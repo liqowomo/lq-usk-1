@@ -1,13 +1,17 @@
-// See https://svelte.dev/docs/kit/types#app.d.ts
-// for information about these interfaces
+import type { Env } from "../worker-configuration"
+
 declare global {
-	namespace App {
-        interface Platform {
-            env: Env;
-            cf: CfProperties;
-            ctx: ExecutionContext;
-        }
+  namespace App {
+    interface Platform {
+      env: Env // This will now include DB
+      cf?: CfProperties
+      ctx?: ExecutionContext
     }
+
+    interface Locals {
+      db: any // Or proper Drizzle type
+    }
+  }
 }
 
-export {};
+export {}
