@@ -29,7 +29,7 @@
     <h1
       class="text-3xl sm:text-4xl md:text-5xl font-bold text-rose-300 tracking-tight drop-shadow-2xl"
     >
-      Welcome to SvelteKit
+      MS5-M1 Work SVK
     </h1>
 
     <p
