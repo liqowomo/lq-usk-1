@@ -1,9 +1,7 @@
 <script>
-  import favicon from "$lib/assets/favicon.svg"
 </script>
 
 <svelte:head>
-  <link rel="icon" href={favicon} />
   <meta name="theme-color" content="#0f172a" />
 </svelte:head>
 
