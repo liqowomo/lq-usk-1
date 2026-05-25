@@ -13,7 +13,23 @@ export const load: PageServerLoad = async ({ locals }) => {
 }
 
 export const actions: Actions = {
-  default: async ({ request, locals, platform }) => {
+  default: async ({ request, locals, platform, getClientAddress }) => {
+    // Rate limiting - get client IP address
+    const clientIp = getClientAddress()
+    const rateLimiter = platform?.env?.RATE_LIMITER
+
+    if (rateLimiter) {
+      const { success } = await rateLimiter.limit({ key: clientIp })
+
+      if (!success) {
+        return {
+          success: false,
+          error: "STOP!!!!",
+        }
+      }
+    }
+
+    // Process the form submission
     const formData = await request.formData()
     const name = formData.get("name")
     const message = formData.get("message")

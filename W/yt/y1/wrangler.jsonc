@@ -48,4 +48,14 @@
    * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
    */
   // "services": [  {   "binding": "MY_SERVICE",   "service": "my-service"  } ]
+  "ratelimits": [
+    {
+      "name": "RATE_LIMITER",
+      "namespace_id": "1001", // Any positive integer, unique per rate limiter
+      "simple": {
+        "limit": 10, // Number of requests allowed
+        "period": 60, // Time window in seconds (only 10 or 60 allowed)
+      },
+    },
+  ],
 }
