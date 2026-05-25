@@ -7,6 +7,10 @@ import type { Actions, PageServerLoad } from "./$types"
 // Cache ratelimit instance
 let ratelimitInstance: Ratelimit | null = null
 
+// Upstash Ratelimit Helper  -
+// You need to -  wrangler secret put UPSTASH_REDIS_REST_TOKEN & wrangler secret put UPSTASH_REDIS_REST_URL
+// Make sure creds Read and Write or error
+
 function getRatelimit(platform: App.Platform | undefined) {
   if (ratelimitInstance) return ratelimitInstance
 
