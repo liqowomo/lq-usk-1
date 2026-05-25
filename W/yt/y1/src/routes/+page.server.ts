@@ -1,8 +1,37 @@
 import { mistressBook } from "$lib/server/db/schema"
 import { Ratelimit } from "@upstash/ratelimit"
-import { Redis } from "@upstash/redis"
+import { Redis } from "@upstash/redis/cloudflare"
 import { desc } from "drizzle-orm"
 import type { Actions, PageServerLoad } from "./$types"
+
+// Cache ratelimit instance
+let ratelimitInstance: Ratelimit | null = null
+
+function getRatelimit(platform: App.Platform | undefined) {
+  if (ratelimitInstance) return ratelimitInstance
+
+  // Check if platform exists and has credentials
+  const url = platform?.env?.UPSTASH_REDIS_REST_URL
+  const token = platform?.env?.UPSTASH_REDIS_REST_TOKEN
+
+  if (!url || !token) {
+    console.warn(
+      "⚠️ Rate limiting disabled: Upstash credentials not configured",
+    )
+    return null
+  }
+
+  try {
+    ratelimitInstance = new Ratelimit({
+      redis: new Redis({ url, token }),
+      limiter: Ratelimit.slidingWindow(10, "60 s"),
+    })
+    return ratelimitInstance
+  } catch (error) {
+    console.error("Failed to initialize rate limiter:", error)
+    return null
+  }
+}
 
 export const load: PageServerLoad = async ({ locals }) => {
   const messages = await locals.db
@@ -16,28 +45,36 @@ export const load: PageServerLoad = async ({ locals }) => {
 
 export const actions: Actions = {
   default: async ({ request, locals, platform, getClientAddress }) => {
-    const ratelimit = new Ratelimit({
-      redis: new Redis({
-        url: platform?.env?.UPSTASH_REDIS_REST_URL,
-        token: platform?.env?.UPSTASH_REDIS_REST_TOKEN,
-      }),
-      limiter: Ratelimit.slidingWindow(2, "7 d"),
-    })
+    // Pass platform to getRatelimit (it handles undefined)
+    const ratelimit = getRatelimit(platform)
 
-    const { success } = await ratelimit.limit(getClientAddress())
+    // Only apply rate limiting if configured
+    if (ratelimit) {
+      const { success, reset } = await ratelimit.limit(getClientAddress())
 
-    if (!success) {
-      return {
-        success: false,
-        error: "FUCKOFFF",
+      if (!success) {
+        const secondsToWait = Math.ceil((reset - Date.now()) / 1000)
+        return {
+          success: false,
+          error: `Rate limit exceeded. Please wait ${secondsToWait} seconds before posting again.`,
+        }
       }
     }
 
+    // Process form
     const formData = await request.formData()
     const name = formData.get("name")
     const message = formData.get("message")
     const fetish = formData.get("fetish")
     const country = platform?.cf?.country ?? "Unknown"
+
+    // Validate required fields
+    if (!name || !message || !fetish) {
+      return {
+        success: false,
+        error: "All fields are required.",
+      }
+    }
 
     await locals.db.insert(mistressBook).values({
       name: name as string,
