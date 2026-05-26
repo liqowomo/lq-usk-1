@@ -1,9 +1,53 @@
-<script>
-	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
+<script lang="ts">
+  import "./layout.css"
 
-	let { children } = $props();
+  const FAVICON_URL =
+    "https://res.cloudinary.com/dzma12njh/image/upload/q_auto/f_auto/6.webp"
+  const OG_IMAGE_URL =
+    "https://res.cloudinary.com/dzma12njh/image/upload/q_auto/f_auto/6.webp"
+
+  const SITE_URL = "https://tinyurl.com/4eymn9ev"
+  const SITE_TITLE = "MS5-M2"
+  const SITE_DESCRIPTION = "MS5-M2 Work"
+  const TWITTER_SITE = "@PantySmeller"
+  const TWITTER_CREATOR = "@PantySmeller"
+  const BRAND_COLOR = "#FF2DD1"
+
+  let { children } = $props()
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content={BRAND_COLOR} />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/webp" href={FAVICON_URL} />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={SITE_URL} />
+  <meta property="og:title" content={SITE_TITLE} />
+  <meta property="og:description" content={SITE_DESCRIPTION} />
+  <meta property="og:image" content={OG_IMAGE_URL} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={SITE_TITLE} />
+  <meta property="og:site_name" content={SITE_TITLE} />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content={SITE_URL} />
+  <meta name="twitter:title" content={SITE_TITLE} />
+  <meta name="twitter:description" content={SITE_DESCRIPTION} />
+  <meta name="twitter:image" content={OG_IMAGE_URL} />
+  <meta name="twitter:image:alt" content={SITE_TITLE} />
+  <meta name="twitter:site" content={TWITTER_SITE} />
+  <meta name="twitter:creator" content={TWITTER_CREATOR} />
+
+  <title>{SITE_TITLE}</title>
+  <meta name="description" content={SITE_DESCRIPTION} />
+  <link rel="canonical" href={SITE_URL} />
+</svelte:head>
+
 {@render children()}
