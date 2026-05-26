@@ -3,6 +3,16 @@
   import BaseMeta from "$lib/co/BaseMeta.svelte"
   // -----------------------------
 
+  $effect(() => {
+    console.log("Rune is active")
+    if (userName) {
+      document.title = `Hello, ${userName}!`
+    } else {
+      document.title = "Welcome to SvelteKit - Page 2"
+    }
+    console.log(`I am sending ${userName} to server`)
+  })
+
   let userName = $state("")
 </script>
 
@@ -14,6 +24,7 @@
 
   <h2>Your {userName}</h2>
 
+  <!-- Binding the input to userName State - This does instant changes  -->
   <input type="text" bind:value={userName} />
   <p>You Entered: {userName}</p>
 </div>
