@@ -44,6 +44,7 @@
 
   .page-wrapper[data-route="/p2"] {
     background: #09140b;
+    color: #6aec70;
   }
 
   .main-nav {

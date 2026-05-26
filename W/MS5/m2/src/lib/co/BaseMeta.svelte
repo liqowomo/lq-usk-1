@@ -8,7 +8,7 @@ BasMeta.svelte - Component for setting up default og image tags etc
   // Props with defaults
   let {
     title = "MS5-M2",
-    description = "MS5-M2 Work",
+    description = "MS5-M2 PantySmell",
     ogImageURL = "https://res.cloudinary.com/dzma12njh/image/upload/q_auto/f_auto/6.webp",
     ogImageWidth = 1200,
     ogImageHeight = 630,
