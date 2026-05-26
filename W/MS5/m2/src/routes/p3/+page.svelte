@@ -3,20 +3,11 @@
   import BaseMeta from "$lib/co/BaseMeta.svelte"
   // -----------------------------
 
-  $effect(() => {
-    console.log("Rune is active")
-    if (userName) {
-      document.title = `Hello, ${userName}!`
-    } else {
-      document.title = "Welcome to SvelteKit - Page 2"
-    }
-    console.log(`I am sending ${userName} to server`)
-  })
-
-  let userName = $state("")
+  let userName = $state("Existing Value")
+  $inspect(userName)
 </script>
 
-<BaseMeta title="p2" description="Page two work" />
+<BaseMeta title="p3" description="p3w" />
 
 <div class="page-wrapper">
   <h1>Welcome to SvelteKit - Page 3</h1>
