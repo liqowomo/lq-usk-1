@@ -26,11 +26,7 @@
 </script>
 
 <div class="page-wrapper">
-  <nav class="main-nav">
-    <a href="/">🏠 Home</a>
-    <a href="/p2">ℹ️ P2</a>
-  </nav>
-  <h1>Welcome to SvelteKit</h1>
+  <h1>Welcome to SvelteKit - Page 2</h1>
   <p>Testing number variable : {numberOne}</p>
 
   <p>Testing number variable : {number}</p>
@@ -43,7 +39,7 @@
 
 <style>
   .page-wrapper {
-    background: #091413;
+    background: #0c0914;
     min-height: 100vh;
     align-items: center;
     flex-direction: column;
@@ -55,25 +51,5 @@
     color: white;
     font-size: 2rem;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .main-nav {
-    background-color: #0d1164;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-  }
-
-  .main-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-  }
-
-  .main-nav a:hover {
-    background-color: #555;
   }
 </style>
