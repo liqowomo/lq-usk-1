@@ -1,7 +1,14 @@
 <script>
   import Card from "$lib/comp/Card.svelte"
+  // Rune
+  let number = $state(0)
+
+  let userInformation = $derived(
+    number === 0 ? "Zero Pussy" : `You've fucked ${number} pussies`,
+  )
+
   function onclick() {
-    console.log("Clicked from function")
+    number++
   }
   let numberOne = 1
 </script>
@@ -55,6 +62,11 @@
     <button {onclick}>Click Me</button>
 
     <p>Displaying Variable {numberOne}</p>
+    <p>Displaying Variable {number}</p>
+
+    <Card title="Fast Performance">
+      <p>{userInformation}</p>
+    </Card>
 
     <Card title="Fast Performance">
       Built on Svelte's compiler, SvelteKit delivers blazing fast page loads.
