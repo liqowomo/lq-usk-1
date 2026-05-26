@@ -1,12 +1,17 @@
-<script>
+<script lang="ts">
+  interface UserInputInterface {
+    children: Snippet
+    userName: string
+  }
+
   // ------seo and meta-----------------
   import BaseMeta from "$lib/co/BaseMeta.svelte"
+  import type { Snippet } from "svelte"
   // -----------------------------
 
-  let data = $props()
-  $inspect(data)
+  let { userName, children, ...props }: UserInputInterface = $props()
 
-  let userName = $state("Existing Value")
+  //   let userName = $state("Existing Value")
   $inspect(userName)
 </script>
 
@@ -23,6 +28,8 @@
   <input type="text" bind:value={userName} />
   <p>You Entered: {userName}</p>
 </div>
+
+{@render children()}
 
 <style>
   h1 {
