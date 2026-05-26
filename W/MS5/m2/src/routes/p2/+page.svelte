@@ -3,44 +3,19 @@
   import BaseMeta from "$lib/co/BaseMeta.svelte"
   // -----------------------------
 
-  let numberOne = 0
-  let number = $state(0)
-
-  //   Drived syntax - Pased on existing state
-  let userInformation = $derived.by(() => calculateUserInformation())
-
-  function onclick2() {
-    console.log("Booty Smell")
-  }
-
-  function onclick() {
-    number++
-  }
-
-  //   Note this function is going into userInformation which has derived.by() function
-  function calculateUserInformation() {
-    if (number === 0) {
-      return "Click button Pleae"
-    }
-    if (number === 1) {
-      return `You clicked exactly one time`
-    }
-    return `You clicked ${number} times`
-  }
+  let userName = $state("")
 </script>
 
 <BaseMeta title="p2" description="Page two work" />
 
 <div class="page-wrapper">
   <h1>Welcome to SvelteKit - Page 2</h1>
-  <p>Testing number variable : {numberOne}</p>
+  <hr />
 
-  <p>Testing number variable : {number}</p>
+  <h2>Your {userName}</h2>
 
-  <button {onclick}>Lickme</button>
-  <!-- <button {onclick2}>Lickme</button> -->
-
-  <p>{userInformation}</p>
+  <input type="text" bind:value={userName} />
+  <p>You Entered: {userName}</p>
 </div>
 
 <style>
@@ -48,5 +23,28 @@
     color: white;
     font-size: 2rem;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  input,
+  textarea,
+  select {
+    background: #1a1a1a;
+    color: #e5e5e5;
+    border: 1px solid #333;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-family: inherit;
+    outline: none;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #5b9efc;
+    box-shadow:
+      0 0 0 3px rgba(91, 158, 252, 0.25),
+      0 0 12px rgba(91, 158, 252, 0.2);
   }
 </style>
