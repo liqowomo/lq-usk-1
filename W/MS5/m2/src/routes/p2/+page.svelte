@@ -25,6 +25,11 @@
   }
 </script>
 
+<svelte:head>
+  <title>Contact | MS5-M2</title>
+  <meta name="description" content="Get in touch with MS5-M2 team" />
+</svelte:head>
+
 <div class="page-wrapper">
   <h1>Welcome to SvelteKit - Page 2</h1>
   <p>Testing number variable : {numberOne}</p>
