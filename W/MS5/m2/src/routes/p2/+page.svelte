@@ -1,4 +1,8 @@
 <script>
+  // ------seo and meta-----------------
+  import BaseMeta from "$lib/co/BaseMeta.svelte"
+  // -----------------------------
+
   let numberOne = 0
   let number = $state(0)
 
@@ -25,10 +29,7 @@
   }
 </script>
 
-<svelte:head>
-  <title>Contact | MS5-M2</title>
-  <meta name="description" content="Get in touch with MS5-M2 team" />
-</svelte:head>
+<BaseMeta title="p2" description="Page two work" />
 
 <div class="page-wrapper">
   <h1>Welcome to SvelteKit - Page 2</h1>
@@ -43,15 +44,6 @@
 </div>
 
 <style>
-  .page-wrapper {
-    background: #0c0914;
-    min-height: 100vh;
-    align-items: center;
-    flex-direction: column;
-    color: #6aece1;
-    padding: 5rem;
-  }
-
   h1 {
     color: white;
     font-size: 2rem;

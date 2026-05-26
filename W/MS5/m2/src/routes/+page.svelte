@@ -1,4 +1,8 @@
 <script>
+  // ------seo and meta-----------------
+  import BaseMeta from "$lib/co/BaseMeta.svelte"
+  // -----------------------------
+
   let numberOne = 0
   let number = $state(0)
 
@@ -25,11 +29,12 @@
   }
 </script>
 
+<BaseMeta
+  title="Home"
+  description="Welcome to MS5-M2 - Your trusted platform"
+/>
+
 <div class="page-wrapper">
-  <nav class="main-nav">
-    <a href="/">🏠 Home</a>
-    <a href="/p2">ℹ️ P2</a>
-  </nav>
   <h1>Welcome to SvelteKit</h1>
   <p>Testing number variable : {numberOne}</p>
 
@@ -41,39 +46,15 @@
   <p>{userInformation}</p>
 </div>
 
-<style>
-  .page-wrapper {
-    background: #091413;
-    min-height: 100vh;
-    align-items: center;
-    flex-direction: column;
-    color: #6aece1;
-    padding: 5rem;
-  }
+<!-- Style ZOne -->
+<!-- Style ZOne -->
+<!-- Style ZOne -->
+<!-- Style ZOne -->
 
+<style>
   h1 {
     color: white;
     font-size: 2rem;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .main-nav {
-    background-color: #0d1164;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-  }
-
-  .main-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-  }
-
-  .main-nav a:hover {
-    background-color: #555;
   }
 </style>
