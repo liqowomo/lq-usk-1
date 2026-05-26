@@ -8,3 +8,7 @@
 1. Continuing U work from m1
 
 # Deployed here
+
+https://lqusk1-w-ms5-m2.liqowomo.workers.dev/
+
+- Current
