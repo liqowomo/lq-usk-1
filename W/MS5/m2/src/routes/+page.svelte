@@ -1,4 +1,8 @@
-<!-- src/routes/+page.svelte -->
+<script>
+  let numberOne = 69
+</script>
+
+<!-- All Components in here -->
 <div class="page-wrapper">
   <h1>Welcome to SvelteKit</h1>
   <p>This page has its own dark background, other pages won't</p>
