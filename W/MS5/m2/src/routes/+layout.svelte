@@ -23,9 +23,10 @@
 
 <div class="page-wrapper" data-route={page.url.pathname}>
   <nav class="main-nav">
-    <a href="/">Home</a>
-    <a href="/p2">Page 2</a>
-    <a href="/p3">Page 3</a>
+    <a href="/">🪹Home</a>
+    <a href="/p2"> 1️⃣ Page 2</a>
+    <a href="/p3"> 2️⃣ Page 3</a>
+    <a href="/p4"> 3️⃣ Page 4</a>
   </nav>
 
   <main>
@@ -50,6 +51,10 @@
   .page-wrapper[data-route="/p3"] {
     background: #0a0914;
     color: #6aecdf;
+  }
+  .page-wrapper[data-route="/p4"] {
+    background: #140912;
+    color: #bcec6a;
   }
 
   .main-nav {
