@@ -1,2 +1,24 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<!-- src/routes/+page.svelte -->
+<div class="page-wrapper">
+  <h1>Welcome to SvelteKit</h1>
+  <p>This page has its own dark background, other pages won't</p>
+</div>
+
+<style>
+  .page-wrapper {
+    background: #091413;
+    min-height: 100vh;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #6aece1;
+  }
+
+  /* This CSS only applies to THIS page */
+  h1 {
+    color: white;
+    font-size: 5rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+</style>
