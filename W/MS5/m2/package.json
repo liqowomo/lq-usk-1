@@ -24,7 +24,7 @@
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
-    "deploy": "bun run build && wrangler deploy --minify"
+    "deploy": "bun run build && wrangler deploy --minify --name lqusk1-w-ms5-m2"
   },
   "type": "module",
   "dependencies": {
