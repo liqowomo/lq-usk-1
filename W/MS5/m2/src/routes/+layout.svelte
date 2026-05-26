@@ -25,6 +25,7 @@
   <nav class="main-nav">
     <a href="/">Home</a>
     <a href="/p2">Page 2</a>
+    <a href="/p3">Page 3</a>
   </nav>
 
   <main>
@@ -45,6 +46,10 @@
   .page-wrapper[data-route="/p2"] {
     background: #09140b;
     color: #6aec70;
+  }
+  .page-wrapper[data-route="/p3"] {
+    background: #0a0914;
+    color: #6aecdf;
   }
 
   .main-nav {
