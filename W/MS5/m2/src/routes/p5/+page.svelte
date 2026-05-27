@@ -17,17 +17,9 @@
 <!-- Coming from the UserInput.svelte -->
 
 {#snippet userInput(exampleString: string)}
-  <div class="page-wrapper">
-    <h1>Welcome to SvelteKit - Page 5</h1>
-    <hr />
-    <code> Based on Page 2 - Testing the inspect runs </code>
-    <hr />
-    <h2>Your {userName}</h2>
-
-    <!-- Binding the input to userName State - This does instant changes  -->
-    <input type="text" bind:value={userName} />
-    <p>You Entered: {userName}</p>
-  </div>
+  <!-- Binding the input to userName State - This does instant changes  -->
+  <input type="text" bind:value={userName} />
+  <p>You Entered: {userName}</p>
 
   {#if isEditMode}
     <input type="text" bind:value={userName} />
