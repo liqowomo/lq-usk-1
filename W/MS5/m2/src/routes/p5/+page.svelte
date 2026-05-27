@@ -36,8 +36,6 @@
   {/if}
 {/snippet}
 
-{@render userInput("PantYSmell")}
-
 <hr />
 <button class="button" onclick={() => (isEditMode = !isEditMode)}>
   {isEditMode ? "Save Changes" : "Edit Panty"}
@@ -52,6 +50,7 @@
 </button>
 
 {#each peopleWaiting as person}
+  {@render userInput(person)}
   <p>Person Waiting with ID: {person}</p>
 {/each}
 
