@@ -1,55 +1,45 @@
-<!-- asd 
-BasMeta.svelte - Component for setting up default og image tags etc  
--->
-
+<!-- BaseMeta.svelte -->
 <script lang="ts">
-  import { MetaTags } from "svelte-meta-tags"
+  import { page } from "$app/state"
 
-  // Props with defaults
   let {
     title = "MS5-M2",
     description = "MS5-M2 PantySmell",
     ogImageURL = "https://res.cloudinary.com/dzma12njh/image/upload/6.webp",
     ogImageWidth = 1200,
     ogImageHeight = 630,
+    ogImageAlt = title,
     twitterCardType = "summary_large_image",
-    canonicalURL = "https://tinyurl.com/4eymn9ev",
   } = $props()
 
-  // Constants
-  const SITE_URL = "https://tinyurl.com/4eymn9ev"
   const TWITTER_SITE = "@PantySmeller"
   const TWITTER_CREATOR = "@PantySmeller"
   const SITE_NAME = "MS5-M2"
+
+  const fullTitle = $derived(`${title} | ${SITE_NAME}`)
 </script>
 
-<MetaTags
-  {title}
-  titleTemplate="%s | MS5-M2"
-  {description}
-  canonical={canonicalURL}
-  openGraph={{
-    type: "website",
-    url: SITE_URL,
-    title: title,
-    description: description,
-    siteName: SITE_NAME,
-    images: [
-      {
-        url: ogImageURL,
-        width: ogImageWidth,
-        height: ogImageHeight,
-        alt: title,
-      },
-    ],
-  }}
-  twitter={{
-    cardType: twitterCardType as
-      | "summary"
-      | "summary_large_image"
-      | "app"
-      | "player",
-    site: TWITTER_SITE,
-    creator: TWITTER_CREATOR,
-  }}
-/>
+<svelte:head>
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={page.url.href} />
+
+  <!-- OG -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={page.url.href} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:site_name" content={SITE_NAME} />
+  <meta property="og:image" content={ogImageURL} />
+  <meta property="og:image:width" content={String(ogImageWidth)} />
+  <meta property="og:image:height" content={String(ogImageHeight)} />
+  <meta property="og:image:alt" content={ogImageAlt} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content={twitterCardType} />
+  <meta name="twitter:site" content={TWITTER_SITE} />
+  <meta name="twitter:creator" content={TWITTER_CREATOR} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageURL} />
+</svelte:head>

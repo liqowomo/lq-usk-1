@@ -26,8 +26,5 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
     "deploy": "bun run build && wrangler deploy --minify --name lqusk1-w-ms5-m2"
   },
-  "type": "module",
-  "dependencies": {
-    "svelte-meta-tags": "^4.7.0"
-  }
+  "type": "module"
 }
