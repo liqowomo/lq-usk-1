@@ -27,6 +27,7 @@
     <a href="/p2"> 1️⃣ Page 2</a>
     <a href="/p3"> 2️⃣ Page 3</a>
     <a href="/p4"> 3️⃣ Page 4</a>
+    <a href="/p5"> 5️⃣ Page 4</a>
   </nav>
 
   <main>
@@ -55,6 +56,10 @@
   .page-wrapper[data-route="/p4"] {
     background: #140912;
     color: #bcec6a;
+  }
+  .page-wrapper[data-route="/p5"] {
+    background: #141409;
+    color: #8bba39;
   }
 
   .main-nav {

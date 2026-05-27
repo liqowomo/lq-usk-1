@@ -1,6 +1,6 @@
 <!-- Head declarations -->
 <script>
-  import UserInput from "$lib/co/UserInput.svelte"
+  import UserInput from "$lib/co/UserInput2.svelte"
 
   let data = $props()
   $inspect(data)
