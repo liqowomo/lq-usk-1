@@ -2,4 +2,4 @@
 
 PROJECT_NAME="mdoc"
 
-wrangler pages deploy . --project-name="$PROJECT_NAME"
+wrangler pages deploy . --minify --project-name="$PROJECT_NAME"
