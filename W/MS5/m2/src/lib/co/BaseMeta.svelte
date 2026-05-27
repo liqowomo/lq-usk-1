@@ -9,7 +9,7 @@ BasMeta.svelte - Component for setting up default og image tags etc
   let {
     title = "MS5-M2",
     description = "MS5-M2 PantySmell",
-    ogImageURL = "https://res.cloudinary.com/dzma12njh/image/upload/q_auto/f_auto/6.webp",
+    ogImageURL = "https://res.cloudinary.com/dzma12njh/image/upload/6.webp",
     ogImageWidth = 1200,
     ogImageHeight = 630,
     twitterCardType = "summary_large_image",
