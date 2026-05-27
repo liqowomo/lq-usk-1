@@ -27,7 +27,7 @@
     <a href="/p2"> 1️⃣ Page 2</a>
     <a href="/p3"> 2️⃣ Page 3</a>
     <a href="/p4"> 3️⃣ Page 4</a>
-    <a href="/p5"> 5️⃣ Page 4</a>
+    <a href="/p5"> 5️⃣ Page 5</a>
   </nav>
 
   <main>

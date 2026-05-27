@@ -1,13 +1,43 @@
 <!-- Head declarations -->
-<script>
-  import UserInput from "$lib/co/UserInput2.svelte"
-
+<script lang="ts">
   let data = $props()
   $inspect(data)
+
+  let userName = $state("Smellpanty")
+
+  //   let userName = $state("Existing Value")
+  $inspect(userName)
+
+  let isEditMode = $state(false)
 </script>
 
 <!-- Coming from the UserInput.svelte -->
-<UserInput userName="Fat Aunti"><h1>Put In her Azz</h1></UserInput>
+
+{#snippet userInput(exampleString: string)}
+  <div class="page-wrapper">
+    <h1>Welcome to SvelteKit - Page 5</h1>
+    <hr />
+    <code> Based on Page 2 - Testing the inspect runs </code>
+    <hr />
+    <h2>Your {userName}</h2>
+
+    <!-- Binding the input to userName State - This does instant changes  -->
+    <input type="text" bind:value={userName} />
+    <p>You Entered: {userName}</p>
+  </div>
+
+  {#if isEditMode}
+    <input type="text" bind:value={userName} />
+  {:else}
+    <p>{userName}</p>
+  {/if}
+{/snippet}
+
+{@render userInput("PantYSmell")}
+
+<button class="button" onclick={() => (isEditMode = !isEditMode)}>
+  {isEditMode ? "Save Changes" : "Edit Panty"}
+</button>
 
 <!-- ------------Style Zome----------- -->
 <!-- ------------Style Zome----------- -->
@@ -15,8 +45,56 @@
 
 <style>
   h1 {
-    color: rgb(98, 34, 34);
+    color: rgb(34, 98, 52);
     font-size: 2rem;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  /* From Uiverse.io by Navarog21 */
+  button {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #149cea;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #212121;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+
+  button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #212121;
+    transition: 0.5s;
+  }
+
+  button:hover::before,
+  button:hover::after {
+    transform: scale(0);
+  }
+
+  button:hover {
+    box-shadow: inset 0px 0px 25px #1479ea;
   }
 </style>
