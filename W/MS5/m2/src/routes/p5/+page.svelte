@@ -4,6 +4,9 @@
   $inspect(data)
 
   let userName = $state("Smellpanty")
+  let peopleWaiting = $state(["sasd121", "rfrt55"])
+
+  $inspect(peopleWaiting)
 
   //   let userName = $state("Existing Value")
   $inspect(userName)
@@ -35,9 +38,22 @@
 
 {@render userInput("PantYSmell")}
 
+<hr />
 <button class="button" onclick={() => (isEditMode = !isEditMode)}>
   {isEditMode ? "Save Changes" : "Edit Panty"}
 </button>
+
+<hr />
+<button
+  class="button"
+  onclick={() => peopleWaiting.push(new Date().getTime().toString())}
+>
+  Im Waiting Too
+</button>
+
+{#each peopleWaiting as person}
+  <p>Person Waiting with ID: {person}</p>
+{/each}
 
 <!-- ------------Style Zome----------- -->
 <!-- ------------Style Zome----------- -->
