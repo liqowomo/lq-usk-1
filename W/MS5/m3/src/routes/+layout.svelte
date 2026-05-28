@@ -1,4 +1,6 @@
 <script lang="ts">
+  import "./app.css"
+
   const SITE_URL = "https://lqusk1-w-ms5-m3.liqowomo.workers.dev"
   const SITE_TITLE = "MS5-M3"
   const SITE_DESCRIPTION = "MS5-M3 Work"
