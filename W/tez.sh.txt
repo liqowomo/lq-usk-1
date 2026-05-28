@@ -1,0 +1,32 @@
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+[1;94m · · ────── PantySmellling ────── · ·
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+Thu May 28 10:33:51 AM UTC 2026
+Executing:[1;95mcurl -A "Twitterbot" https://res.cloudinary.com/dzma12njh/image/upload/6.webp -I[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 1520k    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 200 
+date: Thu, 28 May 2026 10:33:51 GMT
+content-type: image/webp
+content-length: 1556504
+cf-ray: a02c9a822a52aa12-BOM
+accept-ranges: bytes
+access-control-allow-origin: *
+cache-control: public, no-transform, max-age=2592000
+content-disposition: inline; filename="6.webp"
+etag: "3613c2de0c8bacb15278286c49bb7025"
+last-modified: Tue, 26 May 2026 16:41:09 GMT
+server: cloudflare
+strict-transport-security: max-age=604800
+vary: Accept-Encoding
+access-control-expose-headers: Content-Length,Content-Disposition,ETag,Server-Timing,Vary,x-content-type-options
+server-timing: cld-cloudflare;dur=29;start=2026-05-28T10:33:51.712Z;desc=hit,rtt;dur=3,content-info;desc="width=854,height=480,du=4.066,bytes=1556504,fr=107,format="webp",o=1,crt=1779813651,ef=(17);"
+timing-allow-origin: *
+x-content-type-options: nosniff
+x-request-id: 3e2d1bd7170f72f7e2b2c40fd64cf3a1
+
+[1;92mDone!
+───── ⋆⋅☆⋅⋆ ─────[0m
+───── ⋆⋅☆⋅⋆ ─────[0m
+───── ⋆⋅☆⋅⋆ ─────[0m
