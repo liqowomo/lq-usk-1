@@ -3,8 +3,7 @@
   import BaseMeta from "$lib/co/BaseMeta.svelte"
   import "./layout.css"
 
-  const FAVICON_URL =
-    "https://res.cloudinary.com/dzma12njh/image/upload/q_auto/f_auto/6.webp"
+  const FAVICON_URL = "https://res.cloudinary.com/dzma12njh/image/upload/6.webp"
   const BRAND_COLOR = "#FF2DD1"
 
   let { children } = $props()
