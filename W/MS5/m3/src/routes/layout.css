@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Metamorphous&display=swap");
+
+.metamorphous-regular {
+  font-family: "Metamorphous", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --slate-dark: #040a14; /* dark slate background */
+  --slate-light-green: #86efac; /* light green (slate-toned) text */
+}
+
+body {
+  background-color: var(--slate-dark);
+  color: var(--slate-light-green);
+  font-family: "Metamorphous";
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Optional: styled elements */
+h1,
+h2,
+h3 {
+  color: var(--slate-light-green);
+  font-weight: 600;
+}
+
+a {
+  color: var(--slate-light-green);
+  text-decoration: underline;
+  text-decoration-color: var(--slate-light-green);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* CSS */
+
+/* From Uiverse.io by Shoh2008 */
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: #1e1e1e;
+  cursor: pointer;
+  color: greenyellow;
+  box-shadow:
+    0 0 10px #363636,
+    inset 0 0 10px #363636;
+}
+
+button:hover {
+  animation: a 0.5s 1 linear;
+}
+
+@keyframes a {
+  0% {
+    transform: scale(0.7, 1.3);
+  }
+
+  25% {
+    transform: scale(1.3, 0.7);
+  }
+
+  50% {
+    transform: scale(0.7, 1.3);
+  }
+
+  75% {
+    transform: scale(1.3, 0.7);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  gap: 1rem; /* Add space between stacked items */
+  /* min-height: 100vh; Full viewport height */
+}
