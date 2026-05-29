@@ -2,7 +2,7 @@
   <div class="fixed-bg-image" style="opacity: 0.3;"></div>
   <div class="content">
     <article class="flex">
-      <video controls autoplay loop muted style="width: 50%; height: auto;">
+      <video autoplay loop muted style="width: 50%; height: auto;">
         <source
           src="https://res.cloudinary.com/dzma12njh/video/upload/v1779993303/8.mp4"
           type="video/mp4"
