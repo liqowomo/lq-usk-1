@@ -1,5 +1,14 @@
+<script lang="ts">
+  let { data } = $props()
+
+  // Provide a default value if blogPost is undefined
+  let { blogPost } = data
+
+  console.log("blogPost:", blogPost)
+</script>
+
 <div class="fixed-bg-container">
-  <div class="fixed-bg-image" style="opacity: 0.3;"></div>
+  <div class="fixed-bg-image"></div>
   <div class="content">
     <article class="flex">
       <video autoplay loop muted style="width: 50%; height: auto;">
@@ -10,6 +19,9 @@
       </video>
       <h1>Dynamic booty</h1>
       <p>Eat and sniff</p>
+
+      <!-- This will now show the default text -->
+      <p>{blogPost}</p>
     </article>
   </div>
 </div>
@@ -30,18 +42,42 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.1; /* Full opacity control! */
+    opacity: 0.3;
     z-index: 1;
-    filter: brightness(0.1);
   }
 
   .content {
     position: relative;
-    z-index: 1;
-    background-color: transparent;
+    z-index: 2;
   }
 
   .flex {
-    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  h1 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  p {
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Make the blogPost paragraph stand out */
+  p:last-of-type {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #ffcc00;
+    font-weight: bold;
   }
 </style>
